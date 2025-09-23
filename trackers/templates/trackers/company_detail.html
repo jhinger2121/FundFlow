@@ -1,0 +1,335 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <!-- Company Info Section -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h1 class="display-4">Company: {{ company.name }}</h1>
+            <p class="text-muted">Leading provider of option-based funds.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card bg-light p-3">
+                        <h5>Total Profit/Loss</h5>
+                        <p class="text-success fs-4">${{ company.total_profit }}</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-light p-3">
+                        <h5>Weekly Profit</h5>
+                        <p class="text-primary fs-4">${{ company.get_current_week_summary.weekly_profit }}</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-light p-3">
+                        <h5>Monthly Profit</h5>
+                        <p class="text-primary fs-4">${{ company.monthly_profit.monthly_profit }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fund Performance Overview Section -->
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <h2>All Funds</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Fund Name</th>
+                        <th>Weekly Profit/Loss</th>
+                        <th>Monthly Profit/Loss</th>
+                        <th>Total Profit/Loss</th>
+                        <th>Active Positions</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for fund in funds %}
+                        <tr>
+                            <td>{{ fund.name }}</td>
+                            <td class="text-success">${{ fund.weekly_profit }}</td>
+                            <td class="text-success">${{ fund.monthly_profit }}</td>
+                            <td class="text-success">${{ fund.total_profit }}</td>
+                            <td>{{ fund.active_positions_count }}</td>
+                            <td><a href="{% url 'fund_detail' fund.id fund.slug %}" class="btn btn-primary btn-sm">View Details</a></td>
+                        </tr>
+                    {% endfor %}
+                    <!-- Fund Row 1 -->
+                    <tr>
+                        <td>ULTY</td>
+                        <td class="text-success">$1,500</td>
+                        <td class="text-success">$6,000</td>
+                        <td class="text-success">$10,000</td>
+                        <td>25</td>
+                        <td><a href="/fund/ulty" class="btn btn-primary btn-sm">View Details</a></td>
+                    </tr>
+                    <!-- Fund Row 2 -->
+                    <tr>
+                        <td>TSLY</td>
+                        <td class="text-danger">-$500</td>
+                        <td class="text-danger">-$2,000</td>
+                        <td class="text-danger">-$5,000</td>
+                        <td>10</td>
+                        <td><a href="/fund/tsly" class="btn btn-primary btn-sm">View Details</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Best and Least Performing Funds Section -->
+    <div class="row mb-5">
+        <!-- Best Performing Funds -->
+        <div class="col-12">
+            <h5>Best Performing Funds</h5>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                {% for fund in top_3_funds %}
+                    <div class="col">
+                        <div class="card border-success h-100">
+                            <div class="card-body">
+                                <h6 class="card-title"><strong>{{ fund.name }}</strong></h6>
+                                <p class="card-text">Total Profit: <span class="text-success">${{ fund.total_profit }}</span></p>
+                                <p class="card-text">Monthly Gain: <span class="text-success">${{ fund.monthly_profit }}</span></p>
+                                <p class="card-text">Weekly Gain: <span class="text-success">${{ fund.weekly_profit }}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    
+        <!-- Least Performing Funds -->
+        <div class="col-12 mt-4">
+            <h5>Least Performing Funds</h5>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                {% for fund in bottom_3_funds %}
+                    <div class="col">
+                        <div class="card border-danger h-100">
+                            <div class="card-body">
+                                <h6 class="card-title"><strong>{{ fund.name }}</strong></h6>
+                                <p class="card-text">Total Loss: <span class="text-danger">${{ fund.total_profit }}</span></p>
+                                <p class="card-text">Monthly Loss: <span class="text-danger">${{ fund.monthly_profit }}</span></p>
+                                <p class="card-text">Weekly Loss: <span class="text-danger">${{ fund.weekly_profit }}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Performance Charts Section -->
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <h5>Profit Trends</h5>
+            <img src="https://via.placeholder.com/500x300" alt="Profit Trends Chart" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <h5>Fund Comparison</h5>
+            <img src="https://via.placeholder.com/500x300" alt="Fund Comparison Chart" class="img-fluid">
+        </div>
+    </div>
+
+    <!-- Underlying Assets Section -->
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <h2>Underlying Assets Overview</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Asset Name</th>
+                        <th>Total Profit/Loss</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TSLA</td>
+                        <td class="text-success">$15,000</td>
+                    </tr>
+                    <tr>
+                        <td>AAPL</td>
+                        <td class="text-danger">-$3,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+<div class="container">
+    {% for company in companies %}
+        <div class="mb-5">
+            <div class="d-flex justify-content-between align-items-center pb-2 mt-4">
+                <!-- Company Name and Link -->
+                <h2 class="fw-bold mb-0">{{ company.name }}</h2>
+                <a href="" class="btn btn-sm btn-primary">
+                    View All Positions
+                </a>
+            </div>
+            {% for fund in company.funds.all %}
+                <!-- Fund Overview Section -->
+                <div class="border border-dark rounded mb-4 p-3">
+                    <div class="border-start border-4 border-primary mb-3 ps-3">
+                        <div class="d-flex justify-content-between">
+                            <h2 class="fw-bold"><a href="{% url 'fund_detail' fund.id %}">{{ fund.name }}</a></h2>
+                            <!-- <div class="">
+                                <span class="text-muted">Current Price: <strong>${{ fund.price }}</strong></span><br>
+                                <span>Underlying Price: <strong>${{ fund.underlying_price }}</strong></span>
+                            </div> -->
+                            <!-- <div class="">
+                                <span>Weekly Profit: <strong>${{ fund.weekly_profit }}</strong></span><br>
+                                <span>Monthly Profit: <strong>${{ fund.monthly_profit }}</strong></span>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <!-- <div class="row">
+                        {% for option in fund.options.all %}
+                            <div class="col-lg-4">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <h5>{{ option.ticker }}</h5>
+                                        <small>Exp: {{ option.expiration_date|date:"Y-m-d" }}</small>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Type</th>
+                                                    <th>Qty</th>
+                                                    <th>Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for position in option.positions.all %}
+                                                    <tr>
+                                                        <td>{{ option.get_type_display }}</td>
+                                                        <td>{{ position.remaining_quantity }}</td>
+                                                        <td>${{ position.average_price }}</td>
+                                                    </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div> -->
+
+                    
+                    <!-- <div class="accordion" id="optionAccordion">
+                        {% for option in fund.options.all %}
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading{{ option.id }}">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ option.id }}" aria-expanded="true" aria-controls="collapse{{ option.id }}">
+                                        {{ option.ticker }} - Exp: {{ option.expiration_date|date:"Y-m-d" }}
+                                        <span class="ms-3 text-muted">
+                                            ({{ option.expiration_date|timesince }} left)
+                                        </span>
+                                    </button>
+                                </h2>
+                                <div id="collapse{{ option.id }}" class="accordion-collapse collapse" aria-labelledby="heading{{ option.id }}" data-bs-parent="#optionAccordion">
+                                    <div class="accordion-body">
+                                        {% if option.positions.all|length > 0 %}
+                                            <table class="table table-sm">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Type / Strike</th>
+                                                        <th>Remaining Qty</th>
+                                                        <th>Avg Price</th>
+                                                        <th>Underlying Asset</th>
+                                                        <th>Created At</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {% for position in option.positions.all %}
+                                                        {% if position.active %}
+                                                            <tr>
+                                                                <td>{{ option.get_type_display }} @ ${{ option.strike_price }}</td>
+                                                                <td>{{ position.remaining_quantity }}</td>
+                                                                <td>${{ position.average_price }}</td>
+                                                                <td>{{ option.underlying_asset.name }}</td>
+                                                                <td>{{ position.date|date:"Y-m-d" }}</td>
+                                                            </tr>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        {% else %}
+                                            <p class="text-muted">No active positions for this option.</p>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div> -->
+                    
+                    
+
+                    <!-- Options Table -->
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Trade Date / </th>
+                                    <th>Expiration Date</th>
+                                    <th>Fund Name and Ticker</th>
+                                    <th>Option Type and Strike Price</th>
+                                    <th>Excs Price</th>
+                                    <th>Qty/per</th>
+                                    <th>Underlying Asset Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for option in fund.options.all %}
+                                    {% for position in option.positions.all %}
+                                        {% if position.active %}
+                                            <tr>
+                                                <!-- Trade and Expiration Dates -->
+                                                <td>
+                                                    {{ position.date|date:"Y-m-d" }}
+                                                </td>
+                                                <td>
+                                                    {{ option.expiration_date|date:"Y-m-d" }}
+                                                </td>
+                                                <!-- Fund and Ticker -->
+                                                <td>
+                                                    {{ fund.name }}<br>Ticker: <strong>{{ option.ticker }}</strong>
+                                                </td>
+                                                <!-- Option Details -->
+                                                <td>
+                                                    Option Type: <strong>{{ option.get_type_display }}</strong><br>
+                                                    Strike Price: <strong>${{ option.strike_price }}</strong>
+                                                </td>
+                                                <!-- Trade Details -->
+                                                 <td>
+                                                    ${{ position.average_price }}
+                                                 </td>
+                                                <td>
+                                                    {{ position.remaining_quantity }}<br>
+                                                </td>
+                                                <!-- Underlying Asset -->
+                                                <td>
+                                                    {{ option.underlying_asset.name }}
+                                                </td>
+                                            </tr>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+

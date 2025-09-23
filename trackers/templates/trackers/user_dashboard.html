@@ -1,0 +1,289 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+
+    <!-- Combined -->
+<div class="row g-3 mb-4">
+  <div class="col-md-4">
+    <div class="card p-3 shadow-sm">
+      <h6 class="mb-1">💼 Combined Total (All Brokers)</h6>
+      <p class="fs-4 {% if conbined_total.amount >= 0 %}text-success{% else %}text-danger{% endif %}">
+        ${{ combined_total_all_time }}
+      </p>
+
+      <!-- Per Broker -->
+      <h6 class="mt-2">Per Broker</h6>
+      <div class="list-group list-group-flush">
+        {% for account in accounts %}
+          <div class="d-flex justify-content-between py-1 border-bottom">
+            <a href="{% url 'broker_detail' account.broker.slug account.broker.id %}" 
+               class="text-decoration-none">
+              {{ account.broker.broker_name }}
+            </a>
+            <span class="{% if account.summary.combined_total_all_time >= 0 %}text-success{% else %}text-danger{% endif %}">
+              ${{ account.summary.combined_total_all_time }}
+            </span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Holdings Profit -->
+<h4 class="mt-4">📈 Holdings Summary</h4>
+<div class="row g-3 mb-4">
+  <div class="col-md-4">
+    <div class="card p-3 border">
+      <h6>Total Gain/Loss (All Brokers)</h6>
+      <p class="fs-4 {% if holding_total.amount >= 0 %}text-success{% else %}text-danger{% endif %}">
+        ${{ holding_total_all_time }}
+      </p>
+
+      <h6 class="mt-2">Per Broker</h6>
+      {% for account in accounts %}
+        <div class="d-flex justify-content-between py-1 border-bottom">
+          <a href="{% url 'broker_detail' account.broker.slug account.broker.id %}" 
+             class="text-decoration-none">
+            {{ account.broker.broker_name }}
+          </a>
+          <span class="{% if account.summary.holding_profit_loss >= 0 %}text-success{% else %}text-danger{% endif %}">
+            ${{ account.summary.holding_profit_loss }}
+          </span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- Options Summary -->
+<h4 class="mt-4">🧾 Options Summary</h4>
+<div class="row g-3 mb-3">
+  <!-- Total Profit -->
+  <div class="col-md-3">
+    <div class="card p-3 border">
+      <h6>Total Profit (All Time)</h6>
+      <p class="fs-4 {% if total_all_time_options.amount >= 0 %}text-success{% else %}text-danger{% endif %}">
+        ${{ user_total_all_time_profit }}
+      </p>
+
+      <h6 class="mt-2">Per Broker</h6>
+      {% for account in accounts %}
+        <div class="d-flex justify-content-between py-1 border-bottom">
+          <a href="{% url 'broker_detail' account.broker.slug account.broker.id %}" 
+             class="text-decoration-none">
+            {{ account.broker.broker_name }}
+          </a>
+          <span class="{% if account.summary.total_all_time_options >= 0 %}text-success{% else %}text-danger{% endif %}">
+            ${{ account.summary.total_all_time_options }}
+          </span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Weekly Profit -->
+  <div class="col-md-3">
+    <div class="card p-3 border">
+      <h6>Weekly Profit</h6>
+      <p class="fs-4 {% if all_user_weekly.amount >= 0 %}text-success{% else %}text-danger{% endif %}">
+        ${{ user_total_weekly_profit }}
+      </p>
+
+      <h6 class="mt-2">Per Broker</h6>
+      {% for account in accounts %}
+        <div class="d-flex justify-content-between py-1 border-bottom">
+          <a href="{% url 'broker_detail' account.broker.slug account.broker.id %}" 
+             class="text-decoration-none">
+            {{ account.broker.broker_name }}
+          </a>
+          <span class="{% if account.summary.weekly >= 0 %}text-success{% else %}text-danger{% endif %}">
+            ${{ account.summary.weekly }}
+          </span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Monthly Profit -->
+  <div class="col-md-3">
+    <div class="card p-3 border">
+      <h6>Monthly Profit</h6>
+      <p class="fs-4 {% if all_user_monthly.amount >= 0 %}text-success{% else %}text-danger{% endif %}">
+        ${{ user_total_monthly_profit }}
+      </p>
+
+      <h6 class="mt-2">Per Broker</h6>
+      {% for account in accounts %}
+        <div class="d-flex justify-content-between py-1 border-bottom">
+          <a href="{% url 'broker_detail' account.broker.slug account.broker.id %}" 
+             class="text-decoration-none">
+            {{ account.broker.broker_name }}
+          </a>
+          <span class="{% if account.summary.monthly >= 0 %}text-success{% else %}text-danger{% endif %}">
+            ${{ account.summary.monthly }}
+          </span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Yearly Profit -->
+  <div class="col-md-3">
+    <div class="card p-3 border">
+      <h6>Yearly Profit</h6>
+      <p class="fs-4 {% if all_user_yearly.amount >= 0 %}text-success{% else %}text-danger{% endif %}">
+        ${{ user_total_yearly_profit }}
+      </p>
+
+      <h6 class="mt-2">Per Broker</h6>
+      {% for account in accounts %}
+        <div class="d-flex justify-content-between py-1 border-bottom">
+          <a href="{% url 'broker_detail' account.broker.slug account.broker.id %}" 
+             class="text-decoration-none">
+            {{ account.broker.broker_name }}
+          </a>
+          <span class="{% if account.summary.yearly >= 0 %}text-success{% else %}text-danger{% endif %}">
+            ${{ account.summary.yearly }}
+          </span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+    <div class="row mt-5">
+        <h2 class="mb-4 fw-semibold">📋 All Holdings</h2>
+
+        <div class="table-responsive shadow-sm rounded-3">
+            <table class="table table-bordered table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Fund</th>
+                        <th>Asset</th>
+                        <th>Quantity</th>
+                        <th>Avg. Price</th>
+                        <th>Total Cost</th>
+                        <th>Realized P/L</th>
+                        <th>Live Price</th>
+                        <th>Updated</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for holding in holdings %}
+                    <tr>
+                        <td class="fw-medium">{{ holding.fund.name }}</td>
+                        <td>{{ holding.asset.name }}</td>
+                        <td><strong>{{ holding.quantity }}</strong></td>
+                        <td>${{ holding.average_price }}</td>
+                        <td>${{ holding.total_cost }}</td>
+                        <td class="{% if holding.realized_profit >= 0 %}text-success{% else %}text-danger{% endif %}">
+                            <strong>${{ holding.realized_profit }}</strong>
+                        </td>
+                        <td>
+                            <span class="badge bg-success-subtle text-success fw-semibold">
+                                ${{ holding.asset.live_price }}
+                            </span>
+                        </td>
+                        <td class="text-muted small">
+                            {{ holding.asset.live_price_updated_at|timesince }} ago
+                        </td>
+                        <td>
+                            <a href="{% url 'holding_detail' holding.fund.broker_account.broker_name holding.id %}" class="btn btn-sm btn-outline-primary">
+                                View
+                            </a>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="9" class="text-center text-muted">No holdings found.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Fund Performance Section -->
+    <div class="row my-5">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="mb-0">Your Funds</h2>
+                <!-- You can add an optional "Add Fund" or export button here -->
+            </div>
+
+            <table class="table table-striped table-hover shadow-sm">
+                <thead class="table-light">
+                    <tr>
+                        <th>Fund</th>
+                        <th>Weekly</th>
+                        <th>Monthly</th>
+                        <th>Total</th>
+                        <th>Positions</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for fund in funds %}
+                    <tr>
+                        <td class="fw-semibold">{{ fund.name }}</td>
+
+                        <!-- Weekly Profit -->
+                        <td class="{% if fund.get_current_week_summary.weekly_profit >= 0 %}text-success{% else %}text-danger{% endif %}">
+                            {% with profit=fund.get_current_week_summary.weekly_profit %}
+                                {% if profit >= 0 %}
+                                    ▲ ${{ profit }}
+                                {% else %}
+                                    ▼ ${{ profit }}
+                                {% endif %}
+                            {% endwith %}
+                        </td>
+
+                        <!-- Monthly Profit -->
+                        <td class="{% if fund.get_current_month_summary.monthly_profit >= 0 %}text-success{% else %}text-danger{% endif %}">
+                            {% with profit=fund.get_current_month_summary.monthly_profit %}
+                                {% if profit >= 0 %}
+                                    ▲ ${{ profit }}
+                                {% else %}
+                                    ▼ ${{ profit }}
+                                {% endif %}
+                            {% endwith %}
+                        </td>
+
+                        <!-- Total Profit -->
+                        <td class="{% if fund.total_profit >= 0 %}text-success{% else %}text-danger{% endif %}">
+                            {% if fund.total_profit >= 0 %}
+                                ▲ ${{ fund.total_profit }}
+                            {% else %}
+                                ▼ ${{ fund.total_profit }}
+                            {% endif %}
+                        </td>
+
+                        <!-- Positions -->
+                        <td>{{ fund.active_positions_count }}</td>
+
+                        <!-- Actions -->
+                        <td>
+                            <a href="{% url 'user_fund_detail' fund.broker_account.broker_name fund.id fund.slug %}" class="btn btn-sm btn-outline-primary">
+                                View
+                            </a>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="6" class="text-center text-muted">No funds to display.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+</div>
+
+{% for broker in brokers %}
+<a href="{% url 'broker_detail' broker.slug broker.id %}">{{ broker.broker_name}}</a>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block title %}Add Fund{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow rounded-4">
+        <div class="card-header bg-primary text-white rounded-top-4">
+          <h4 class="mb-0">Create a New Fund</h4>
+        </div>
+        <div class="card-body">
+          <form method="post" id="fund-form" novalidate>
+            {% csrf_token %}
+            
+            {% if form.non_field_errors %}
+              <div class="alert alert-danger">
+                {{ form.non_field_errors }}
+              </div>
+            {% endif %}
+            <!-- Broker -->
+            <div class="mb-3">
+              <label for="id_broker_account" class="form-label">Broker Account</label>
+              {{ form.broker_account }}
+              {% if form.broker_account.errors %}
+                <div class="text-danger mt-1">{{ form.broker_account.errors }}</div>
+              {% endif %}
+            </div>
+
+            <!-- Fund Name -->
+            <div class="mb-3">
+              <label for="id_name" class="form-label">Fund Symbol</label>
+              {{ form.name }}
+              <div id="name-help" class="form-text">Choose a unique symbol, e.g., <strong>TSLL</strong>.</div>
+              <div id="name-error" class="text-danger d-none mt-1">You already have a fund with this name.</div>
+              {% if form.name.errors %}
+                <div class="text-danger mt-1">{{ form.name.errors }}</div>
+              {% endif %}
+            </div>
+
+            <!-- Fund Description -->
+            <div class="mb-3">
+              <label for="id_description" class="form-label">Description</label>
+              {{ form.description }}
+              <div class="form-text">Describe your fund's strategy or goal.</div>
+              {% if form.description.errors %}
+                <div class="text-danger mt-1">{{ form.description.errors }}</div>
+              {% endif %}
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-success btn-lg" id="submit-button">Add Fund</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const nameInput = document.getElementById('id_name');
+const brokerInput = document.getElementById('id_broker_account');
+const errorDiv = document.getElementById('name-error');
+const submitBtn = document.getElementById('submit-button');
+let nameValid = true;
+
+nameInput.addEventListener('input', function () {
+  const name = nameInput.value.trim().toUpperCase();
+  nameInput.value = name;
+
+  if (!name) {
+    errorDiv.classList.add('d-none');
+    nameInput.classList.remove('is-invalid');
+    submitBtn.disabled = false;
+    nameValid = true;
+    return;
+  }
+  const brokerId = brokerInput.value; // <-- get selected broker
+
+  fetch(`/ajax/check-fund-name/?name=${encodeURIComponent(name)}&broker_id=${encodeURIComponent(brokerId)}`)
+    .then(response => response.json())
+    .then(data => {
+      if (data.exists) {
+        errorDiv.classList.remove('d-none');
+        nameInput.classList.add('is-invalid');
+        submitBtn.disabled = true;
+        nameValid = false;
+      } else {
+        errorDiv.classList.add('d-none');
+        nameInput.classList.remove('is-invalid');
+        submitBtn.disabled = false;
+        nameValid = true;
+      }
+    });
+});
+
+document.getElementById('fund-form').addEventListener('submit', function (e) {
+  if (!nameValid) {
+    e.preventDefault();
+  }
+});
+</script>
+{% endblock content %}

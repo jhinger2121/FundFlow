@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+  <h2>Holding Detail</h2>
+  <p><strong>Fund:</strong> {{ holding.fund.name }}</p>
+  <p><strong>Asset:</strong> {{ holding.asset.symbol }} - {{ holding.asset.name }}</p>
+  <p><strong>Quantity:</strong> {{ holding.quantity }}</p>
+  <p><strong>Average Price:</strong> ${{ holding.average_price }}</p>
+  <p><strong>Total Cost:</strong> ${{ holding.total_cost }}</p>
+  <p><strong>Realized Profit:</strong> ${{ holding.realized_profit }}</p>
+  <p><strong>Last Updated:</strong> {{ holding.updated_at }}</p>
+
+  <hr>
+  <!-- <a href="#" class="btn btn-primary">Update Holding</a>
+  <a href="#" class="btn btn-danger">Sell</a> -->
+  <a href="{% url 'user_fund_detail' holding.fund.broker_account.broker_name holding.fund.id holding.fund.slug %}" class="btn btn-secondary">Back to Fund</a>
+</div>
+{% endblock %}

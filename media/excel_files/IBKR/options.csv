@@ -1,0 +1,785 @@
+Statement,Header,Field Name,Field Value
+Statement,Data,BrokerName,Interactive Brokers Canada Inc.
+Statement,Data,BrokerAddress,"1800 McGill College Avenue, Suite 2106, Montreal, Quebec, Canada  H3A 3J6"
+Statement,Data,Title,Activity Statement
+Statement,Data,Period,"April 14, 2025 - August 27, 2025"
+Statement,Data,WhenGenerated,"2025-08-28, 15:15:51 EDT"
+Account Information,Header,Field Name,Field Value
+Account Information,Data,Name,Kuldeep singh Jhinjer
+Account Information,Data,Account,U19000401
+Account Information,Data,Account Type,Individual
+Account Information,Data,Customer Type,Individual
+Account Information,Data,Account Capabilities,Margin
+Account Information,Data,Base Currency,CAD
+Net Asset Value,Header,Asset Class,Prior Total,Current Long,Current Short,Current Total,Change
+Net Asset Value,Data,Cash ,0,9583.568286424,-1.341224617,9582.227061807,9582.227061807
+Net Asset Value,Data,Collateral Value,0,2587.3792,0,2587.3792,2587.3792
+Net Asset Value,Data,Stock,0,3724.695104,0,3724.695104,3724.695104
+Net Asset Value,Data,Securities Lent,0,0,-2587.3792,-2587.3792,-2587.3792
+Net Asset Value,Data,Options,0,0,-141.381792,-141.381792,-141.381792
+Net Asset Value,Data,Interest Accruals,0,1.572288,0,1.572288,1.572288
+Net Asset Value,Data,Total,0,15897.214878424,-2730.102216617,13167.112661807,13167.112661807
+Net Asset Value,Header,Time Weighted Rate of Return
+Net Asset Value,Data,15.08489518%
+Change in NAV,Header,Field Name,Field Value
+Change in NAV,Data,Starting Value,0
+Change in NAV,Data,Mark-to-Market,1739.40576671
+Change in NAV,Data,Deposits & Withdrawals,11500
+Change in NAV,Data,Dividends,24.467278
+Change in NAV,Data,Withholding Tax,-3.670774
+Change in NAV,Data,Change in Dividend Accruals,0.120396
+Change in NAV,Data,Interest,3.428989
+Change in NAV,Data,Change in Interest Accruals,1.583843
+Change in NAV,Data,Commissions,-98.090910007
+Change in NAV,Data,Other FX Translations,-0.131951
+Change in NAV,Data,Ending Value,13167.112661807
+Mark-to-Market Performance Summary,Header,Asset Category,Symbol,Prior Quantity,Current Quantity,Prior Price,Current Price,Mark-to-Market P/L Position,Mark-to-Market P/L Transaction,Mark-to-Market P/L Commissions,Mark-to-Market P/L Other,Mark-to-Market P/L Total,Code
+Mark-to-Market Performance Summary,Data,Stocks,TSLL,0,200.0459,--,13.5000,1138.84783167,-220.91067652,-4.141556229,20.796504,934.59210292,
+Mark-to-Market Performance Summary,Data,Total,,,,,,1138.84783167,-220.91067652,-4.141556229,20.796504,934.59210292,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,NVDL 18JUL25 40 P,0,0,--,--,144.689,22.281443,-2.432511997,0,164.537931003,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,NVDL 29AUG25 73 P,0,-1,--,0.6301,45.847726,22.968192,-1.110092472,0,67.705825528,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,PTIR 15AUG25 18 P,0,0,--,--,162.835843,-0.727319,-1.453183362,0,160.655340638,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 25APR25 7.5 P,0,0,--,--,2.7712,4.156,-2.268648101,0,4.658551899,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 02MAY25 11 C,0,0,--,--,68.350766,-74.1258,-2.942288807,0,-8.717322807,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 16MAY25 14.5 C,0,0,--,--,-114.564538,20.9463,-2.960016211,0,-96.578254211,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 16MAY25 16 C,0,0,--,--,57.9379,-3.49575,-1.483232742,0,52.958917258,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 23MAY25 13 P,0,0,--,--,23.5336,6.983,-1.090381484,0,29.426218516,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 23MAY25 15.5 C,0,0,--,--,131.245576,-7.6813,-1.484920984,0,122.079355016,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 30MAY25 12.5 P,0,0,--,--,42.83608,9.7657,-1.089210374,0,51.512569626,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 30MAY25 14.5 P,0,0,--,--,18.60975,-2.07555,-0.803569938,0,15.730630062,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 06JUN25 12.5 P,0,0,--,--,-776.957631,186.96015,-7.203613476,0,-597.201094476,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 06JUN25 19.5 C,0,0,--,--,32.846971,8.393825,-2.637916417,0,38.602879583,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 13JUN25 10 P,0,0,--,--,151.039426,-120.791275,-1.45056195,0,28.79758905,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 13JUN25 11.5 P,0,0,--,--,34.357565,-1.3584,-2.491431452,0,30.507733548,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 13JUN25 13 P,0,0,--,--,11.326136,14.379952,-2.901789072,0,22.804298928,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 13JUN25 13.5 C,0,0,--,--,51.79075,-19.1394,-0.793929654,0,31.857420346,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 20JUN25 11 P,0,0,--,--,46.283366,-2.434684,-1.450880172,0,42.397801828,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 20JUN25 15 C,0,0,--,--,26.00826,5.4284,-1.576244508,0,29.860415492,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 27JUN25 10 P,0,0,--,--,78.214564,-8.2074,-4.615732816,0,65.391431184,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 27JUN25 16 C,0,0,--,--,31.556498,8.241,-1.45692639,0,38.34057161,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 27JUN25 16.5 C,0,0,--,--,22.639026,4.80725,-1.45692639,0,25.98934961,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 03JUL25 9 P,0,0,--,--,11.552021,0.6823,-1.441618024,0,10.792702976,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 03JUL25 10 P,0,0,--,--,26.97405,4.1119,-2.246242716,0,28.839707284,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 03JUL25 10.5 P,0,0,--,--,58.56405,-4.7877,-4.617118746,0,49.159231254,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 03JUL25 15 C,0,0,--,--,4.786623,4.749192,-2.110246992,0,7.425568008,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 11JUL25 8.5 P,0,0,--,--,10.2516,3.42075,-1.445526852,0,12.226823148,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 11JUL25 9 P,0,0,--,--,19.81985,7.52565,-1.445526852,0,25.899973148,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 18JUL25 8.5 P,0,0,--,--,19.831973,-4.78135,-1.989642684,0,13.060980316,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 18JUL25 9.5 P,0,0,--,--,15.067243,8.193,-0.78712882,0,22.47311418,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 25JUL25 8.5 P,0,0,--,--,12.997809,3.42625,-1.98234602,0,14.44171298,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 25JUL25 9 P,0,0,--,--,60.901452,12.98475,-2.23257984,0,71.65362216,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 25JUL25 15 C,0,0,--,--,25.249302,-0.6862,-1.449858256,0,23.113243744,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 25JUL25 15.5 C,0,0,--,--,18.435551,-0.6862,-1.449858256,0,16.299492744,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 01AUG25 14 C,0,0,--,--,6.88756,1.3739,-1.451442916,0,6.810017084,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 08AUG25 10 P,0,0,--,--,38.527298,-13.856,-0.798715264,0,23.872582736,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 08AUG25 10.5 P,0,0,--,--,29.34985,-3.43475,-1.451442916,0,24.463657084,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 08AUG25 12 C,0,0,--,--,-7.554832,15.84585,-1.452637296,0,6.838380704,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 15AUG25 10.5 P,0,0,--,--,11.715423,0.6879,-1.436665392,0,10.966657608,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 15AUG25 13.5 C,0,0,--,--,22.7749,-2.0637,-1.450423392,0,19.260776608,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 15AUG25 14 C,0,0,--,--,14.477553,-0.6879,-2.083291392,0,11.706361608,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 22AUG25 11 P,0,0,--,--,38.6219,1.37955,-3.445861584,0,36.555588416,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 22AUG25 14 C,0,0,--,--,14.545449,3.45475,-0.793542256,0,17.206656744,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 29AUG25 12 P,0,-1,--,0.0450,1.3792,6.22755,-1.458962736,0,6.147787264,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 29AUG25 14 C,0,-1,--,0.1800,-0.65191,-0.815852,-1.443975072,0,-2.911737072,
+Mark-to-Market Performance Summary,Data,Equity and Index Options,TSLL 05SEP25 15.5 C,0,-1,--,0.1700,11.0336,-11.0712,-0.794690736,0,-0.832290736,
+Mark-to-Market Performance Summary,Data,Total,,,,,,758.735349,106.466774,-88.413353778,0,776.788769222,
+Mark-to-Market Performance Summary,Data,Forex,CAD,0,-1.341224617,1.0000,1.0000,0,-11.321333,-5.536,0,-16.857333,
+Mark-to-Market Performance Summary,Data,Forex,USD,0,6948.642899089,--,1.3792,-32.41215516,0,0,0,-32.41215516,
+Mark-to-Market Performance Summary,Data,Total,,,,,,-32.41215516,-11.321333,-5.536,0,-49.26948816,
+Mark-to-Market Performance Summary,Data,Total (All Assets),,,,,,1865.17102551,-125.76523552,-98.090910007,20.796504,1662.111383982,
+Mark-to-Market Performance Summary,Data,Broker Interest Paid and Received,,,,,,,,,,3.428989,
+Total P/L for Statement Period,,,,,,,,,,,,1665.540372982,
+Realized & Unrealized Performance Summary,Header,Asset Category,Symbol,Cost Adj.,Realized S/T Profit,Realized S/T Loss,Realized L/T Profit,Realized L/T Loss,Realized Total,Unrealized S/T Profit,Unrealized S/T Loss,Unrealized L/T Profit,Unrealized L/T Loss,Unrealized Total,Total,Code
+Realized & Unrealized Performance Summary,Data,Stocks,TSLL,0,161.799301224,0,0,0,161.799301224,763.819944688,0,0,0,763.819944688,925.619245912,
+Realized & Unrealized Performance Summary,Data,Total,,0,161.799301224,0,0,0,161.799301224,763.819944688,0,0,0,763.819944688,925.619245912,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,NVDL 18JUL25 40 P,0,163.501895403,0,0,0,163.501895403,0,0,0,0,0,163.501895403,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,NVDL 29AUG25 73 P,0,0,0,0,0,0,67.837000192,0,0,0,67.837000192,67.837000192,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,PTIR 15AUG25 18 P,0,161.600850814,0,0,0,161.600850814,0,0,0,0,0,161.600850814,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 25APR25 7.5 P,0,4.659139581,0,0,0,4.659139581,0,0,0,0,0,4.659139581,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 02MAY25 11 C,0,0,-8.483675617,0,0,-8.483675617,0,0,0,0,0,-8.483675617,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 16MAY25 14.5 C,0,0,-96.535081314,0,0,-96.535081314,0,0,0,0,0,-96.535081314,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 16MAY25 16 C,0,52.985970516,0,0,0,52.985970516,0,0,0,0,0,52.985970516,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 23MAY25 13 P,0,29.148897462,0,0,0,29.148897462,0,0,0,0,0,29.148897462,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 23MAY25 15.5 C,0,120.798727212,0,0,0,120.798727212,0,0,0,0,0,120.798727212,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 30MAY25 12.5 P,0,51.038771238,0,0,0,51.038771238,0,0,0,0,0,51.038771238,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 30MAY25 14.5 P,0,15.659231238,0,0,0,15.659231238,0,0,0,0,0,15.659231238,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 06JUN25 12.5 P,0,0,-598.778462258,0,0,-598.778462258,0,0,0,0,0,-598.778462258,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 06JUN25 19.5 C,0,38.401191425,0,0,0,38.401191425,0,0,0,0,0,38.401191425,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 13JUN25 10 P,0,28.416669746,0,0,0,28.416669746,0,0,0,0,0,28.416669746,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 13JUN25 11.5 P,0,30.117507504,0,0,0,30.117507504,0,0,0,0,0,30.117507504,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 13JUN25 13 P,0,22.931571504,0,0,0,22.931571504,0,0,0,0,0,22.931571504,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 13JUN25 13.5 C,0,31.782277746,0,0,0,31.782277746,0,0,0,0,0,31.782277746,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 20JUN25 11 P,0,42.491979684,0,0,0,42.491979684,0,0,0,0,0,42.491979684,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 20JUN25 15 C,0,29.993023368,0,0,0,29.993023368,0,0,0,0,0,29.993023368,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 27JUN25 10 P,0,64.798275024,0,0,0,64.798275024,0,0,0,0,0,64.798275024,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 27JUN25 16 C,0,38.019745008,0,0,0,38.019745008,0,0,0,0,0,38.019745008,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 27JUN25 16.5 C,0,25.772545008,0,0,0,25.772545008,0,0,0,0,0,25.772545008,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 03JUL25 9 P,0,10.806419024,0,0,0,10.806419024,0,0,0,0,0,10.806419024,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 03JUL25 10 P,0,29.056130608,0,0,0,29.056130608,0,0,0,0,0,29.056130608,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 03JUL25 10.5 P,0,49.814827912,0,0,0,49.814827912,0,0,0,0,0,49.814827912,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 03JUL25 15 C,0,7.413173304,0,0,0,7.413173304,0,0,0,0,0,7.413173304,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 11JUL25 8.5 P,0,12.25714898,0,0,0,12.25714898,0,0,0,0,0,12.25714898,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 11JUL25 9 P,0,25.96214898,0,0,0,25.96214898,0,0,0,0,0,25.96214898,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 18JUL25 8.5 P,0,13.097581744,0,0,0,13.097581744,0,0,0,0,0,13.097581744,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 18JUL25 9.5 P,0,22.539693744,0,0,0,22.539693744,0,0,0,0,0,22.539693744,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 25JUL25 8.5 P,0,14.499536084,0,0,0,14.499536084,0,0,0,0,0,14.499536084,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 25JUL25 9 P,0,71.947186168,0,0,0,71.947186168,0,0,0,0,0,71.947186168,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 25JUL25 15 C,0,23.278757084,0,0,0,23.278757084,0,0,0,0,0,23.278757084,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 25JUL25 15.5 C,0,16.409257084,0,0,0,16.409257084,0,0,0,0,0,16.409257084,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 01AUG25 14 C,0,6.811731324,0,0,0,6.811731324,0,0,0,0,0,6.811731324,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 08AUG25 10 P,0,24.007923324,0,0,0,24.007923324,0,0,0,0,0,24.007923324,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 08AUG25 10.5 P,0,24.724431324,0,0,0,24.724431324,0,0,0,0,0,24.724431324,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 15AUG25 10.5 P,0,10.994064744,0,0,0,10.994064744,0,0,0,0,0,10.994064744,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 15AUG25 13.5 C,0,19.271645744,0,0,0,19.271645744,0,0,0,0,0,19.271645744,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 15AUG25 14 C,0,11.726471744,0,0,0,11.726471744,0,0,0,0,0,11.726471744,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 22AUG25 11 P,0,36.73110672,0,0,0,36.73110672,0,0,0,0,0,36.73110672,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 22AUG25 14 C,0,17.22210336,0,0,0,17.22210336,0,0,0,0,0,17.22210336,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 29AUG25 12 P,0,0,0,0,0,0,6.131592192,0,0,0,6.131592192,6.131592192,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 29AUG25 14 C,0,0,0,0,0,0,0,-2.819415808,0,0,-2.819415808,-2.819415808,
+Realized & Unrealized Performance Summary,Data,Equity and Index Options,TSLL 05SEP25 15.5 C,0,0,0,0,0,0,0,-0.791991808,0,0,-0.791991808,-0.791991808,
+Realized & Unrealized Performance Summary,Data,Total,,0,1400.689608481,-703.797219188,0,0,696.892389293,73.968592384,-3.611407616,0,0,70.357184768,767.249574061,
+Realized & Unrealized Performance Summary,Data,Forex,USD,0,0.035296,-122.169419,0,0,-122.134123,48.762741,-18.76583,0,0,29.996911,-92.137212,
+Realized & Unrealized Performance Summary,Data,Total,,0,0.035296,-122.169419,0,0,-122.134123,48.762741,-18.76583,0,0,29.996911,-92.137212,
+Realized & Unrealized Performance Summary,Data,Total (All Assets),,0,1562.524205705,-825.966638188,0,0,736.557567517,886.551278072,-22.377237616,0,0,864.174040456,1600.731607973,
+Month & Year to Date Performance Summary,Header,Asset Category,Symbol,Description,Mark-to-Market MTD,Mark-to-Market YTD,Realized S/T MTD,Realized S/T YTD,Realized L/T MTD,Realized L/T YTD
+Month & Year to Date Performance Summary,Data,Stocks,TSLL,DIREXION DAILY TSLA BULL 2X,957.73350286,934.59210292,161.79930122,161.79930122,0,0
+Month & Year to Date Performance Summary,Data,Total,,,957.73350286,934.59210292,161.79930122,161.79930122,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,NVDL  250718P00040000,NVDL 18JUL25 40 P,0,164.537931,0,163.5018954,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,NVDL  250829P00073000,NVDL 29AUG25 73 P,67.70582553,67.70582553,0,0,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,PTIR  250815P00018000,PTIR 15AUG25 18 P,71.946227,160.65534064,161.60085081,161.60085081,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250425P00007500,TSLL 25APR25 7.5 P,0,4.6585519,0,4.65913958,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250502C00011000,TSLL 02MAY25 11 C,0,-8.71732281,0,-8.48367562,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250516C00014500,TSLL 16MAY25 14.5 C,0,-96.57825421,0,-96.53508131,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250516C00016000,TSLL 16MAY25 16 C,0,52.95891726,0,52.98597052,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250523P00013000,TSLL 23MAY25 13 P,0,29.42621852,0,29.14889746,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250523C00015500,TSLL 23MAY25 15.5 C,0,122.07935502,0,120.79872721,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250530P00012500,TSLL 30MAY25 12.5 P,0,51.51256963,0,51.03877124,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250530P00014500,TSLL 30MAY25 14.5 P,0,15.73063006,0,15.65923124,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250606P00012500,TSLL 06JUN25 12.5 P,0,-597.20109448,0,-598.77846226,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250606C00019500,TSLL 06JUN25 19.5 C,0,38.60287958,0,38.40119143,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250613P00010000,TSLL 13JUN25 10 P,0,28.79758905,0,28.41666975,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250613P00011500,TSLL 13JUN25 11.5 P,0,30.50773355,0,30.1175075,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250613P00013000,TSLL 13JUN25 13 P,0,22.80429893,0,22.9315715,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250613C00013500,TSLL 13JUN25 13.5 C,0,31.85742035,0,31.78227775,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250620P00011000,TSLL 20JUN25 11 P,0,42.39780183,0,42.49197968,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250620C00015000,TSLL 20JUN25 15 C,0,29.86041549,0,29.99302337,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250627P00010000,TSLL 27JUN25 10 P,0,65.39143118,0,64.79827502,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250627C00016000,TSLL 27JUN25 16 C,0,38.34057161,0,38.01974501,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250627C00016500,TSLL 27JUN25 16.5 C,0,25.98934961,0,25.77254501,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250703P00009000,TSLL 03JUL25 9 P,0,10.79270298,0,10.80641902,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250703P00010000,TSLL 03JUL25 10 P,0,28.83970728,0,29.05613061,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250703P00010500,TSLL 03JUL25 10.5 P,0,49.15923125,0,49.81482791,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250703C00015000,TSLL 03JUL25 15 C,0,7.42556801,0,7.4131733,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250711P00008500,TSLL 11JUL25 8.5 P,0,12.22682315,0,12.25714898,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250711P00009000,TSLL 11JUL25 9 P,0,25.89997315,0,25.96214898,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250718P00008500,TSLL 18JUL25 8.5 P,0,13.06098032,0,13.09758174,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250718P00009500,TSLL 18JUL25 9.5 P,0,22.47311418,0,22.53969374,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250725P00008500,TSLL 25JUL25 8.5 P,0,14.44171298,0,14.49953608,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250725P00009000,TSLL 25JUL25 9 P,0,71.65362216,0,71.94718617,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250725C00015000,TSLL 25JUL25 15 C,0,23.11324374,0,23.27875708,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250725C00015500,TSLL 25JUL25 15.5 C,0,16.29949274,0,16.40925708,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250801C00014000,TSLL 01AUG25 14 C,1.626866,6.81001708,6.81173132,6.81173132,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250808P00010000,TSLL 08AUG25 10 P,38.527298,23.87258274,24.00792332,24.00792332,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250808P00010500,TSLL 08AUG25 10.5 P,64.64735,24.46365708,24.72443132,24.72443132,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250808C00012000,TSLL 08AUG25 12 C,6.8383807,6.8383807,0,0,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250815P00010500,TSLL 15AUG25 10.5 P,10.96665761,10.96665761,10.99406474,10.99406474,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250815C00013500,TSLL 15AUG25 13.5 C,19.26077661,19.26077661,19.27164574,19.27164574,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250815C00014000,TSLL 15AUG25 14 C,11.70636161,11.70636161,11.72647174,11.72647174,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250822P00011000,TSLL 22AUG25 11 P,36.55558842,36.55558842,36.73110672,36.73110672,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250822C00014000,TSLL 22AUG25 14 C,17.20665674,17.20665674,17.22210336,17.22210336,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250829P00012000,TSLL 29AUG25 12 P,6.14778726,6.14778726,0,0,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250829C00014000,TSLL 29AUG25 14 C,-2.91173707,-2.91173707,0,0,0,0
+Month & Year to Date Performance Summary,Data,Equity and Index Options,TSLL  250905C00015500,TSLL 05SEP25 15.5 C,-0.83229074,-0.83229074,0,0,0,0
+Month & Year to Date Performance Summary,Data,Total,,,349.39174767,776.78876922,313.09032907,696.89238924,0,0
+Month & Year to Date Performance Summary,Data,Total (All Assets),,,1307.12525053,1711.38087214,474.88963029,858.69169046,0,0
+Cash Report,Header,Currency Summary,Currency,Total,Month to Date,Year to Date,
+Cash Report,Data,Starting Cash,Base Currency Summary,0,,,
+Cash Report,Data,Commissions,Base Currency Summary,-98.090910007,-15.49301547,-98.09091001,
+Cash Report,Data,Deposits,Base Currency Summary,11500,0,11500,
+Cash Report,Data,Dividends,Base Currency Summary,24.467278,0,24.467278,
+Cash Report,Data,Broker Interest Paid and Received,Base Currency Summary,3.428989,1.432288,3.428989,
+Cash Report,Data,Trades (Sales),Base Currency Summary,15142.521992458,1983.3454,15142.52199246,
+Cash Report,Data,Trades (Purchase),Base Currency Summary,-16908.62968347,0,-16908.62968347,
+Cash Report,Data,Withholding Tax,Base Currency Summary,-3.670774,0,-3.670774,
+Cash Report,Data,Cash FX Translation Gain/Loss,Base Currency Summary,-77.79983016,,,
+Cash Report,Data,Ending Cash,Base Currency Summary,9582.227061807,,,
+Cash Report,Data,Ending Settled Cash,Base Currency Summary,9582.227061807,,,
+Cash Report,Data,Starting Collateral Value,Base Currency Summary,0,,,
+Cash Report,Data,Net Securities Lent Activity,Base Currency Summary,2601.2378,,,
+Cash Report,Data,Ending Collateral Value,Base Currency Summary,2587.3792,,,
+Cash Report,Data,Net Cash Balance,Base Currency Summary,2587.3792,,,
+Cash Report,Data,Net Settled Cash Balance,Base Currency Summary,12169.606261807,,,
+Cash Report,Data,Starting Cash,CAD,0,,,
+Cash Report,Data,Commissions,CAD,-5.536,0,-5.536,
+Cash Report,Data,Deposits,CAD,11500,0,11500,
+Cash Report,Data,Trades (Purchase),CAD,-11495.80522462,0,-11495.80522462,
+Cash Report,Data,Ending Cash,CAD,-1.341224617,,,
+Cash Report,Data,Ending Settled Cash,CAD,-1.341224617,,,
+Cash Report,Data,Starting Cash,USD,0,,,
+Cash Report,Data,Commissions,USD,-67.36925411,-11.23324,-67.36925411,
+Cash Report,Data,Dividends,USD,17.93,0,17.93,
+Cash Report,Data,Broker Interest Paid and Received,USD,2.51,1.04,2.51,
+Cash Report,Data,Trades (Sales),USD,10953.5610862,1439,10953.5610862,
+Cash Report,Data,Trades (Purchase),USD,-3955.298933,0,-3955.298933,
+Cash Report,Data,Withholding Tax,USD,-2.69,0,-2.69,
+Cash Report,Data,Ending Cash,USD,6948.642899089,,,
+Cash Report,Data,Ending Settled Cash,USD,6948.642899089,,,
+Cash Report,Data,Starting Collateral Value,USD,0,,,
+Cash Report,Data,Net Securities Lent Activity,USD,1876,,,
+Cash Report,Data,Ending Collateral Value,USD,1876,,,
+Cash Report,Data,Net Cash Balance,USD,8824.642899089,,,
+Cash Report,Data,Net Settled Cash Balance,USD,8824.642899089,,,
+Open Positions,Header,DataDiscriminator,Asset Category,Currency,Symbol,Quantity,Mult,Cost Price,Cost Basis,Close Price,Value,Unrealized P/L,Code
+Open Positions,Data,Summary,Stocks,USD,TSLL,200.0459,1,10.73156828,2146.806235,13.5,2700.62,553.813765,
+Open Positions,Total,,Stocks,USD,,,,,2146.806235,,2700.62,553.813765,
+Open Positions,Total,,Stocks,CAD,,,,,2960.875159312,,3724.695104,763.819944688,
+Open Positions,Header,DataDiscriminator,Asset Category,Currency,Symbol,Quantity,Mult,Cost Price,Cost Basis,Close Price,Value,Unrealized P/L,Code
+Open Positions,Data,Summary,Equity and Index Options,USD,NVDL 29AUG25 73 P,-1,100,1.1219576,-112.19576,0.6301,-63.01,49.18576,
+Open Positions,Data,Summary,Equity and Index Options,USD,TSLL 29AUG25 12 P,-1,100,0.0894576,-8.94576,0.045,-4.5,4.44576,
+Open Positions,Data,Summary,Equity and Index Options,USD,TSLL 29AUG25 14 C,-1,100,0.1595576,-15.95576,0.18,-18,-2.04424,
+Open Positions,Data,Summary,Equity and Index Options,USD,TSLL 05SEP25 15.5 C,-1,100,0.1642576,-16.42576,0.17,-17,-0.57424,
+Open Positions,Total,,Equity and Index Options,USD,,,,,-153.52304,,-102.51,51.01304,
+Open Positions,Total,,Equity and Index Options,CAD,,,,,-211.738976768,,-141.381792,70.357184768,
+Forex Balances,Header,Asset Category,Currency,Description,Quantity,Cost Price,Cost Basis in CAD,Close Price,Value in CAD,Unrealized P/L in CAD,Code
+Forex Balances,Data,Forex,CAD,CAD,-1.341224617,0,1.341224617,1,-1.341224617,0,
+Forex Balances,Data,Forex,CAD,USD,6948.642899,1.374883053,-9553.571363,1.3792,9583.568274,29.996911,
+Forex Balances,Data,Total,,,,,-9552.230138383,,9582.227049383,29.996911,
+Net Stock Position Summary,Header,Asset Category,Currency,Symbol,Description,Shares at IB,Shares Borrowed,Shares Lent,Net Shares
+Net Stock Position Summary,Data,Stocks,USD,TSLL,DIREXION DAILY TSLA BULL 2X,200.0459,0,-134,66.0459
+Trades,Header,DataDiscriminator,Asset Category,Currency,Symbol,Date/Time,Quantity,T. Price,C. Price,Proceeds,Comm/Fee,Basis,Realized P/L,MTM P/L,Code
+Trades,Data,Order,Stocks,USD,TSLL,"2025-06-06, 13:11:38",100.0459,10.865002294,10.5,-1086.998933,-1.004602111,1088.003535111,0,-36.517,FPA;O;P
+Trades,Data,Order,Stocks,USD,TSLL,"2025-06-06, 13:12:35",100,10.858,10.5,-1085.8,-1.0046,1086.8046,0,-35.8,O
+Trades,Data,Order,Stocks,USD,TSLL,"2025-07-24, 15:58:54",100,10.585,10.54,-1058.5,-1.0027,1059.5027,0,-4.5,O
+Trades,Data,Order,Stocks,USD,TSLL,"2025-08-08, 16:20:00",-100,12,12.84,1200,-0.0166,-1087.5046,117.42456,-84,A;C
+Trades,SubTotal,,Stocks,USD,TSLL,,200.0459,,,-2031.298933,-3.028502111,2146.806235111,117.42456,-160.817,
+Trades,Total,,Stocks,USD,,,,,,-2031.298933,-3.028502111,2146.806235111,117.42456,-160.817, 
+Trades,Total,,Stocks,CAD,,,,,,-2765.32145885,-4.141556231,2924.447553601,161.799301224,-220.9106998, 
+Trades,Header,DataDiscriminator,Asset Category,Currency,Symbol,Date/Time,Quantity,T. Price,C. Price,Proceeds,Comm/Fee,Basis,Realized P/L,MTM P/L,Code
+Trades,Data,Order,Equity and Index Options,USD,NVDL 18JUL25 40 P,"2025-05-27, 10:00:53",-1,2.36,2.1702,236,-0.71074,-235.28926,0,18.98,O
+Trades,Data,Order,Equity and Index Options,USD,NVDL 18JUL25 40 P,"2025-06-02, 13:43:50",1,1.15,1.1213,-115,-1.05795,235.28926,119.23131,-2.87,C
+Trades,SubTotal,,Equity and Index Options,USD,NVDL 18JUL25 40 P,,0,,,121,-1.76869,0,119.23131,16.11,
+Trades,Data,Order,Equity and Index Options,USD,NVDL 29AUG25 73 P,"2025-08-18, 10:17:53",-1,1.13,0.9636,113,-0.80424,-112.19576,0,16.64,O
+Trades,SubTotal,,Equity and Index Options,USD,NVDL 29AUG25 73 P,,-1,,,113,-0.80424,-112.19576,0,16.64,
+Trades,Data,Order,Equity and Index Options,USD,PTIR 15AUG25 18 P,"2025-07-15, 12:12:19",-1,1.18,1.1853,118,-1.05894,-116.94106,0,-0.53,O
+Trades,Data,Order,Equity and Index Options,USD,PTIR 15AUG25 18 P,"2025-08-15, 16:20:00",1,0,0,0,0,116.94106,116.94106,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,PTIR 15AUG25 18 P,,0,,,118,-1.05894,0,116.94106,-0.53,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 25APR25 7.5 P,"2025-04-24, 11:28:18",-1,0.06,0.02,6,-1.0602068,-4.9397932,0,4,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 25APR25 7.5 P,"2025-04-25, 11:51:02",1,0.01,0,-1,-0.57725,4.939793,3.362543,-1,C
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 25APR25 7.5 P,,0,,,5,-1.6374568,-0.0000002,3.362543,3,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 02MAY25 11 C,"2025-04-25, 10:13:39",-1,0.23,0.575,23,-1.0631794,-21.9368206,0,-34.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 02MAY25 11 C,"2025-05-01, 10:31:42",1,0.27,0.08,-27,-1.06045,21.936821,-6.123629,-19,C
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 02MAY25 11 C,,0,,,-4,-2.1236294,0.0000004,-6.123629,-53.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 16MAY25 14.5 C,"2025-05-09, 11:43:57",-1,0.11,0.1,11,-1.0610458,-9.9389542,0,1,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 16MAY25 14.5 C,"2025-05-16, 12:44:04",1,0.78,0.92,-78,-1.06045,9.938954,-69.121496,14,C
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 16MAY25 14.5 C,,0,,,-67,-2.1214958,-0.0000002,-69.121496,15,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 16MAY25 16 C,"2025-05-14, 11:36:31",-1,0.39,0.415,39,-1.06074,-37.93926,0,-2.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 16MAY25 16 C,"2025-05-16, 16:20:00",1,0,0,0,0,37.93926,37.93926,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 16MAY25 16 C,,0,,,39,-1.06074,0,37.93926,-2.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 23MAY25 15.5 C,"2025-05-16, 12:44:04",-1,0.89,0.945,89,-1.06324,-87.93676,0,-5.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 23MAY25 15.5 C,"2025-05-23, 16:20:00",1,0,0,0,0,87.93676,87.93676,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 23MAY25 15.5 C,,0,,,89,-1.06324,0,87.93676,-5.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 23MAY25 13 P,"2025-05-16, 11:51:21",-1,0.22,0.17,22,-0.78074,-21.21926,0,5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 23MAY25 13 P,"2025-05-23, 16:20:00",1,0,0,0,0,21.21926,21.21926,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 23MAY25 13 P,,0,,,22,-0.78074,0,21.21926,5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 30MAY25 12.5 P,"2025-05-19, 12:49:04",-1,0.38,0.31,38,-0.78074,-37.21926,0,7,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 30MAY25 12.5 P,"2025-05-30, 16:20:00",1,0,0,0,0,37.21926,37.21926,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 30MAY25 12.5 P,,0,,,38,-0.78074,0,37.21926,7,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 30MAY25 14.5 P,"2025-05-28, 10:52:30",-1,0.12,0.135,12,-0.58074,-11.41926,0,-1.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 30MAY25 14.5 P,"2025-05-30, 16:20:00",1,0,0,0,0,11.41926,11.41926,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 30MAY25 14.5 P,,0,,,12,-0.58074,0,11.41926,-1.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 06JUN25 19.5 C,"2025-05-29, 12:57:35",-1,0.31,0.24,31,-1.06074,-29.93926,0,7,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 06JUN25 19.5 C,"2025-06-05, 10:32:32",1,0.01,0.0007,-1,-0.85795,29.93926,28.08131,-0.93,C
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 06JUN25 19.5 C,,0,,,30,-1.91869,0,28.08131,6.07,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 06JUN25 12.5 P,"2025-06-02, 10:42:40",-1,0.19,0.105,19,-1.06074,-17.93926,0,8.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 06JUN25 12.5 P,"2025-06-02, 11:51:53",-1,0.18,0.105,18,-1.49074,-16.50926,0,7.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 06JUN25 12.5 P,"2025-06-02, 13:40:57",-1,0.14,0.105,14,-0.58074,-13.41926,0,3.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 06JUN25 12.5 P,"2025-06-06, 12:46:54",3,1.61,2,-483,-2.12385,47.86778,-437.25607,117,C;P
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 06JUN25 12.5 P,,0,,,-432,-5.25607,0,-437.25607,136.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 13JUN25 13.5 C,"2025-06-10, 12:11:51",-1,0.24,0.38,24,-0.58074,-23.41926,0,-14,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 13JUN25 13.5 C,"2025-06-13, 16:20:00",1,0,0,0,0,23.41926,23.41926,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 13JUN25 13.5 C,,0,,,24,-0.58074,0,23.41926,-14,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 13JUN25 10 P,"2025-06-05, 12:29:10",-1,0.22,1.1033,22,-1.06074,-20.93926,0,-88.33,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 13JUN25 10 P,"2025-06-13, 16:20:00",1,0,0,0,0,20.93926,20.93926,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 13JUN25 10 P,,0,,,22,-1.06074,0,20.93926,-88.33,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 13JUN25 11.5 P,"2025-06-04, 11:18:14",-1,0.25,0.25,25,-0.78074,-24.21926,0,0,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 13JUN25 11.5 P,"2025-06-13, 13:03:36",1,0.01,0,-1,-1.04795,24.21926,22.17131,-1,C
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 13JUN25 11.5 P,,0,,,24,-1.82869,0,22.17131,-1,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 13JUN25 13 P,"2025-05-29, 12:49:23",-1,0.37,0.4331,37,-1.06074,-35.93926,0,-6.31,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 13JUN25 13 P,"2025-06-13, 13:07:49",1,0.18,0.35,-18,-1.05795,35.93926,16.88131,17,C
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 13JUN25 13 P,,0,,,19,-2.11869,0,16.88131,10.69,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 20JUN25 15 C,"2025-06-16, 11:57:09",-1,0.11,0.095,11,-0.58074,-10.41926,0,1.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 20JUN25 15 C,"2025-06-16, 11:58:10",-1,0.12,0.095,12,-0.58074,-11.41926,0,2.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 20JUN25 15 C,"2025-06-20, 16:20:00",2,0,0,0,0,21.83852,21.83852,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 20JUN25 15 C,,0,,,23,-1.16148,0,21.83852,4,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 20JUN25 11 P,"2025-06-04, 11:22:48",-1,0.32,0.3378,32,-1.06074,-30.93926,0,-1.78,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 20JUN25 11 P,"2025-06-20, 16:20:00",1,0,0,0,0,30.93926,30.93926,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 20JUN25 11 P,,0,,,32,-1.06074,0,30.93926,-1.78,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 27JUN25 16 C,"2025-06-23, 14:41:16",-1,0.29,0.23,29,-1.06074,-27.93926,0,6,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 27JUN25 16 C,"2025-06-27, 16:20:00",1,0,0,0,0,27.93926,27.93926,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 27JUN25 16 C,,0,,,29,-1.06074,0,27.93926,6,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 27JUN25 16.5 C,"2025-06-23, 14:41:44",-1,0.2,0.165,20,-1.06074,-18.93926,0,3.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 27JUN25 16.5 C,"2025-06-27, 16:20:00",1,0,0,0,0,18.93926,18.93926,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 27JUN25 16.5 C,,0,,,20,-1.06074,0,18.93926,3.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 27JUN25 10 P,"2025-06-16, 11:59:48",-1,0.17,0.17,17,-1.54074,-15.45926,0,0,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 27JUN25 10 P,"2025-06-17, 11:53:51",-1,0.22,0.28,22,-0.78074,-21.21926,0,-6,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 27JUN25 10 P,"2025-06-20, 15:41:21",-1,0.12,0.12,12,-1.06074,-10.93926,0,0,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 27JUN25 10 P,"2025-06-27, 16:20:00",3,0,0,0,0,47.61778,47.61778,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 27JUN25 10 P,,0,,,51,-3.38222,0,47.61778,-6,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 03JUL25 15 C,"2025-06-30, 09:59:28",-1,0.07,0.0351,7,-1.55074,-5.44926,0,3.49,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 03JUL25 15 C,"2025-07-03, 16:20:00",1,0,0,0,0,5.44926,5.44926,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 03JUL25 15 C,,0,,,7,-1.55074,0,5.44926,3.49,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 03JUL25 9 P,"2025-07-01, 11:21:17",-1,0.09,0.085,9,-1.05644,-7.94356,0,0.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 03JUL25 9 P,"2025-07-03, 16:20:00",1,0,0,0,0,7.94356,7.94356,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 03JUL25 9 P,,0,,,9,-1.05644,0,7.94356,0.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 03JUL25 10 P,"2025-06-25, 12:20:47",-1,0.15,0.125,15,-1.06074,-13.93926,0,2.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 03JUL25 10 P,"2025-06-30, 09:57:35",-1,0.08,0.075,8,-0.58074,-7.41926,0,0.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 03JUL25 10 P,"2025-07-03, 16:20:00",2,0,0,0,0,21.35852,21.35852,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 03JUL25 10 P,,0,,,23,-1.64148,0,21.35852,3,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 03JUL25 10.5 P,"2025-06-26, 14:18:50",-1,0.14,0.15,14,-1.06074,-12.93926,0,-1,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 03JUL25 10.5 P,"2025-06-27, 13:42:13",-1,0.11,0.14,11,-1.54074,-9.45926,0,-3,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 03JUL25 10.5 P,"2025-06-30, 09:59:57",-1,0.15,0.145,15,-0.78074,-14.21926,0,0.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 03JUL25 10.5 P,"2025-07-03, 16:20:00",3,0,0,0,0,36.61778,36.61778,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 03JUL25 10.5 P,,0,,,40,-3.38222,0,36.61778,-3.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 11JUL25 8.5 P,"2025-07-07, 11:09:24",-1,0.1,0.075,10,-1.05644,-8.94356,0,2.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 11JUL25 8.5 P,"2025-07-11, 16:20:00",1,0,0,0,0,8.94356,8.94356,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 11JUL25 8.5 P,,0,,,10,-1.05644,0,8.94356,2.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 11JUL25 9 P,"2025-07-07, 11:09:59",-1,0.2,0.145,20,-1.05644,-18.94356,0,5.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 11JUL25 9 P,"2025-07-11, 16:20:00",1,0,0,0,0,18.94356,18.94356,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 11JUL25 9 P,,0,,,20,-1.05644,0,18.94356,5.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 18JUL25 8.5 P,"2025-07-08, 12:55:13",-1,0.11,0.145,11,-1.45644,-9.54356,0,-3.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 18JUL25 8.5 P,"2025-07-18, 16:20:00",1,0,0,0,0,9.54356,9.54356,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 18JUL25 8.5 P,,0,,,11,-1.45644,0,9.54356,-3.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 18JUL25 9.5 P,"2025-07-10, 13:07:27",-1,0.17,0.11,17,-0.57644,-16.42356,0,6,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 18JUL25 9.5 P,"2025-07-18, 16:20:00",1,0,0,0,0,16.42356,16.42356,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 18JUL25 9.5 P,,0,,,17,-0.57644,0,16.42356,6,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 25JUL25 15 C,"2025-07-18, 15:51:36",-1,0.18,0.185,18,-1.05644,-16.94356,0,-0.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 25JUL25 15 C,"2025-07-25, 16:20:00",1,0,0,0,0,16.94356,16.94356,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 25JUL25 15 C,,0,,,18,-1.05644,0,16.94356,-0.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 25JUL25 15.5 C,"2025-07-18, 15:51:56",-1,0.13,0.135,13,-1.05644,-11.94356,0,-0.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 25JUL25 15.5 C,"2025-07-25, 16:20:00",1,0,0,0,0,11.94356,11.94356,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 25JUL25 15.5 C,,0,,,13,-1.05644,0,11.94356,-0.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 25JUL25 8.5 P,"2025-07-14, 10:05:32",-1,0.12,0.095,12,-1.44644,-10.55356,0,2.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 25JUL25 8.5 P,"2025-07-25, 16:20:00",1,0,0,0,0,10.55356,10.55356,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 25JUL25 8.5 P,,0,,,12,-1.44644,-0,10.55356,2.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 25JUL25 9 P,"2025-07-10, 13:06:50",-1,0.36,0.29,36,-1.05644,-34.94356,0,7,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 25JUL25 9 P,"2025-07-14, 10:05:56",-1,0.18,0.155,18,-0.57644,-17.42356,0,2.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 25JUL25 9 P,"2025-07-25, 16:20:00",2,0,0,0,0,52.36712,52.36712,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 25JUL25 9 P,,0,,,54,-1.63288,0,52.36712,9.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 01AUG25 14 C,"2025-07-28, 13:17:35",-1,0.06,0.05,6,-1.05644,-4.94356,0,1,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 01AUG25 14 C,"2025-08-01, 16:20:00",1,0,0,0,0,4.94356,4.94356,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 01AUG25 14 C,,0,,,6,-1.05644,0,4.94356,1,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 08AUG25 12 C,"2025-08-04, 10:54:09",-1,0.06,0.075,6,-1.05424,-4.94576,0,-1.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 08AUG25 12 C,"2025-08-08, 16:20:00",1,0,0.13,0,0,4.94576,0,13,A;C
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 08AUG25 12 C,,0,,,6,-1.05424,0,0,11.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 08AUG25 10 P,"2025-07-31, 11:01:11",-1,0.18,0.28,18,-0.57644,-17.42356,0,-10,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 08AUG25 10 P,"2025-08-08, 16:20:00",1,0,0,0,0,17.42356,17.42356,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 08AUG25 10 P,,0,,,18,-0.57644,0,17.42356,-10,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 08AUG25 10.5 P,"2025-07-28, 13:18:13",-1,0.19,0.215,19,-1.05644,-17.94356,0,-2.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 08AUG25 10.5 P,"2025-08-08, 16:20:00",1,0,0,0,0,17.94356,17.94356,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 08AUG25 10.5 P,,0,,,19,-1.05644,0,17.94356,-2.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 15AUG25 13.5 C,"2025-08-08, 15:40:37",-1,0.15,0.165,15,-1.05424,-13.94576,0,-1.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 15AUG25 13.5 C,"2025-08-15, 16:20:00",1,0,0,0,0,13.94576,13.94576,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 15AUG25 13.5 C,,0,,,15,-1.05424,0,13.94576,-1.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 15AUG25 14 C,"2025-08-08, 15:39:52",-1,0.1,0.105,10,-1.51424,-8.48576,0,-0.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 15AUG25 14 C,"2025-08-15, 16:20:00",1,0,0,0,0,8.48576,8.48576,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 15AUG25 14 C,,0,,,10,-1.51424,0,8.48576,-0.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 15AUG25 10.5 P,"2025-08-08, 15:41:16",-1,0.09,0.085,9,-1.04424,-7.95576,0,0.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 15AUG25 10.5 P,"2025-08-15, 16:20:00",1,0,0,0,0,7.95576,7.95576,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 15AUG25 10.5 P,,0,,,9,-1.04424,0,7.95576,0.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 22AUG25 14 C,"2025-08-15, 11:35:21",-1,0.13,0.105,13,-0.57424,-12.42576,0,2.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 22AUG25 14 C,"2025-08-22, 16:20:00",1,0,0,0,0,12.42576,12.42576,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 22AUG25 14 C,,0,,,13,-0.57424,0,12.42576,2.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 22AUG25 11 P,"2025-08-12, 13:21:19",-1,0.14,0.135,14,-1.44424,-12.55576,0,0.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 22AUG25 11 P,"2025-08-15, 14:32:39",-1,0.15,0.145,15,-1.05424,-13.94576,0,0.5,O
+Trades,Data,Order,Equity and Index Options,USD,TSLL 22AUG25 11 P,"2025-08-22, 16:20:00",2,0,0,0,0,26.50152,26.50152,0,C;Ep
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 22AUG25 11 P,,0,,,29,-2.49848,0,26.50152,1,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 29AUG25 14 C,"2025-08-22, 13:24:58",-1,0.17,0.1759,17,-1.04424,-15.95576,0,-0.59,O
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 29AUG25 14 C,,-1,,,17,-1.04424,-15.95576,0,-0.59,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 29AUG25 12 P,"2025-08-26, 10:12:21",-1,0.1,0.055,10,-1.05424,-8.94576,0,4.5,O
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 29AUG25 12 P,,-1,,,10,-1.05424,-8.94576,0,4.5,
+Trades,Data,Order,Equity and Index Options,USD,TSLL 05SEP25 15.5 C,"2025-08-26, 13:15:06",-1,0.17,0.25,17,-0.57424,-16.42576,0,-8,O
+Trades,SubTotal,,Equity and Index Options,USD,TSLL 05SEP25 15.5 C,,-1,,,17,-0.57424,-16.42576,0,-8,
+Trades,Total,,Equity and Index Options,USD,,,,,,731,-64.340752,-153.52304,508.190448,77.77, 
+Trades,Total,,Equity and Index Options,CAD,,,,,,1010.5351,-88.413353778,-218.414594225,696.892389293,106.466774, 
+Trades,Header,DataDiscriminator,Asset Category,Currency,Symbol,Date/Time,Quantity,T. Price,,Proceeds,Comm in CAD,,,MTM in CAD,Code
+Trades,Data,Order,Forex,CAD,USD.CAD,"2025-05-05, 19:49:51",2.7610862,1.38245,,-3.817063617,0,,,-0.013116,
+Trades,Data,Order,Forex,CAD,USD.CAD,"2025-05-16, 11:48:22","4,641.83",1.3988,,-6492.991804,-2.7918,,,-10.212026,
+Trades,Data,Order,Forex,CAD,USD.CAD,"2025-06-04, 11:32:50","3,653.97",1.3681,,-4998.996357,-2.7442,,,-1.096191,
+Trades,SubTotal,,Forex,CAD,USD.CAD,,8298.5610862,,,-11495.805224617,-5.536,,,-11.321333,
+Trades,Total,,Forex,CAD,,,,,,-11495.805224617,-5.536,,,-11.321333, 
+Deposits & Withdrawals,Header,Currency,Settle Date,Description,Amount
+Deposits & Withdrawals,Data,CAD,2025-04-08,Electronic Fund Transfer,500
+Deposits & Withdrawals,Data,CAD,2025-04-08,Electronic Fund Transfer,500
+Deposits & Withdrawals,Data,CAD,2025-04-23,Electronic Fund Transfer,1500
+Deposits & Withdrawals,Data,CAD,2025-05-08,Electronic Fund Transfer,4000
+Deposits & Withdrawals,Data,CAD,2025-05-28,Electronic Fund Transfer,5000
+Deposits & Withdrawals,Data,Total,,,11500
+Fees,Header,Subtitle,Currency,Date,Description,Amount
+Fees,Data,Other Fees,CAD,2025-05-02,J********21:US Consolidated Snapshot for Apr 2025,-0.01
+Fees,Data,Other Fees,CAD,2025-05-02,J********21:US Consolidated Snapshot for Apr 2025,0.01
+Fees,Data,Other Fees,CAD,2025-06-03,J********21:Global Snapshot PNP for May 2025,-0.16
+Fees,Data,Other Fees,CAD,2025-06-03,J********21:Global Snapshot PNP for May 2025,0.16
+Fees,Data,Total,,,,0
+Fees,Notes,"Market data is provided by Global Financial Information Services (GmbH). Your local broker collects amounts owed for fees and tax for such data on behalf of Global Financial Information Services (GmbH). Note, you are responsible for any applicable taxes relating to the provision of these services."
+Dividends,Header,Currency,Date,Description,Amount
+Dividends,Data,USD,2025-07-01,TSLL(US25460G2865) Cash Dividend USD 0.08962 per Share (Ordinary Dividend),17.93
+Dividends,Data,Total,,,17.93
+Dividends,Data,Total in CAD,,,24.467278
+Withholding Tax,Header,Currency,Date,Description,Amount,Code
+Withholding Tax,Data,USD,2025-07-01,TSLL(US25460G2865) Cash Dividend USD 0.08962 per Share - US Tax,-2.69,
+Withholding Tax,Data,Total,,,-2.69,
+Withholding Tax,Data,Total in CAD,,,-3.670774,
+Interest,Header,Currency,Date,Description,Amount
+Interest,Data,USD,2025-07-03,USD IBKR Managed Securities (SYEP) Interest for Jun-2025,1.47
+Interest,Data,USD,2025-08-05,USD IBKR Managed Securities (SYEP) Interest for Jul-2025,1.04
+Interest,Data,Total,,,2.51
+Interest,Data,Total in CAD,,,3.428989
+Interest Accruals,Header,Currency,Field Name,Field Value
+Interest Accruals,Data,Base Currency Summary,Starting Accrual Balance,0
+Interest Accruals,Data,Base Currency Summary,Interest Accrued,5.012832
+Interest Accruals,Data,Base Currency Summary,Accrual Reversal,-3.428989
+Interest Accruals,Data,Base Currency Summary,FX Translation,-0.011555
+Interest Accruals,Data,Base Currency Summary,Ending Accrual Balance,1.572288
+Interest Accruals,Data,USD,Starting Accrual Balance,0
+Interest Accruals,Data,USD,Interest Accrued,3.65
+Interest Accruals,Data,USD,Accrual Reversal,-2.51
+Interest Accruals,Data,USD,Ending Accrual Balance,1.14
+Interest Accruals,Data,USD,Ending Accrual Balance in CAD,1.572288
+Change in Dividend Accruals,Header,Asset Category,Currency,Symbol,Date,Ex Date,Pay Date,Quantity,Tax,Fee,Gross Rate,Gross Amount,Net Amount,Code
+Change in Dividend Accruals,Data,Starting Dividend Accruals in CAD,,,,,,,,,,,0,
+Change in Dividend Accruals,Data,Stocks,USD,TSLL,2025-06-23,2025-06-24,2025-07-01,200.0459,2.69,0,0.08962,17.93,15.24,Po
+Change in Dividend Accruals,Data,Stocks,USD,TSLL,2025-07-01,2025-06-24,2025-07-01,200.0459,-2.69,0,0.08962,-17.93,-15.24,Re
+Change in Dividend Accruals,Data,Total,,,,,,,0,0,,0,0,
+Change in Dividend Accruals,Data,Total in CAD,,,,,,,0.021251,0,,0.141647,0.120396,
+Change in Dividend Accruals,Data,Ending Dividend Accruals in CAD,,,,,,,,,,,0,
+Stock Yield Enhancement Program Securities Lent,Header,Asset Category,Currency,Symbol,Transaction ID,Quantity,Interest Rate on Customer Collateral (%),Collateral Amount
+Stock Yield Enhancement Program Securities Lent,Data,Stocks,USD,TSLL,SLB.109858863,-134,0.61,1876
+Stock Yield Enhancement Program Securities Lent,Data,Total,,,,,,1876
+Stock Yield Enhancement Program Securities Lent,Data,Total in CAD,,,,,,2587.3792
+Stock Yield Enhancement Program Securities Lent Activity,Header,Asset Category,Currency,Symbol,Date,Description, ,Transaction ID,Quantity,Collateral Amount
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-10,New Loan Allocation, ,SLB.106818215,-121,1452
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-11,Loan Return Allocation, ,SLB.106818215,121,-1452
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-11,New Loan Allocation, ,SLB.106862974,-173,2422
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-12,Loan Return Allocation, ,SLB.106862974,173,-2422
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-12,New Loan Allocation, ,SLB.106924272,-200,2800
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-13,Loan Return Allocation, ,SLB.106924272,200,-2800
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-13,New Loan Allocation, ,SLB.106970528,-173,2249
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-16,Loan Return Allocation, ,SLB.106970528,173,-2249
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-16,New Loan Allocation, ,SLB.107033903,-139,1807
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-17,Loan Return Allocation, ,SLB.107033903,139,-1807
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-17,New Loan Allocation, ,SLB.107090613,-195,2730
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-18,Loan Return Allocation, ,SLB.107090613,195,-2730
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-18,New Loan Allocation, ,SLB.107138991,-200,2600
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-19,Loan Return Allocation, ,SLB.107138991,200,-2600
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-19,New Loan Allocation, ,SLB.107173986,-192,2496
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-20,Loan Return Allocation, ,SLB.107173986,192,-2496
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-20,New Loan Allocation, ,SLB.107239435,-200,2600
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-23,Loan Return Allocation, ,SLB.107239435,200,-2600
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-23,New Loan Allocation, ,SLB.107298556,-198,2574
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-24,Loan Return Allocation, ,SLB.107298556,198,-2574
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-24,New Loan Allocation, ,SLB.107356893,-78,1170
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-25,Loan Return Allocation, ,SLB.107356893,78,-1170
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-25,New Loan Allocation, ,SLB.107404957,-190,2660
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-26,Loan Return Allocation, ,SLB.107404957,190,-2660
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-26,New Loan Allocation, ,SLB.107463365,-141,1833
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-27,Loan Return Allocation, ,SLB.107463365,141,-1833
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-27,New Loan Allocation, ,SLB.107527913,-199,2587
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-30,Loan Return Allocation, ,SLB.107527913,199,-2587
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-06-30,New Loan Allocation, ,SLB.107575055,-197,2561
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-01,Loan Return Allocation, ,SLB.107575055,197,-2561
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-01,New Loan Allocation, ,SLB.107637897,-172,2236
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-02,Loan Return Allocation, ,SLB.107637897,172,-2236
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-07,New Loan Allocation, ,SLB.107836623,-49,588
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-08,Loan Return Allocation, ,SLB.107836623,49,-588
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-08,New Loan Allocation, ,SLB.107892229,-60,660
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-09,Loan Return Allocation, ,SLB.107892229,60,-660
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-09,New Loan Allocation, ,SLB.107947025,-96,1056
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-10,Loan Return Allocation, ,SLB.107947025,96,-1056
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-10,New Loan Allocation, ,SLB.107994522,-132,1452
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-11,Loan Return Allocation, ,SLB.107994522,132,-1452
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-11,New Loan Allocation, ,SLB.108057672,-123,1476
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-14,Loan Return Allocation, ,SLB.108057672,123,-1476
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-14,New Loan Allocation, ,SLB.108112793,-168,2016
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-15,Loan Return Allocation, ,SLB.108112793,168,-2016
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-15,New Loan Allocation, ,SLB.108170408,-165,1980
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-16,Loan Return Allocation, ,SLB.108170408,165,-1980
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-16,New Loan Allocation, ,SLB.108225354,-153,1836
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-17,Loan Return Allocation, ,SLB.108225354,153,-1836
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-17,New Loan Allocation, ,SLB.108280897,-117,1521
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-18,Loan Return Allocation, ,SLB.108280897,117,-1521
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-18,New Loan Allocation, ,SLB.108326288,-181,2172
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-21,Loan Return Allocation, ,SLB.108326288,181,-2172
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-21,New Loan Allocation, ,SLB.108388633,-108,1404
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-22,Loan Return Allocation, ,SLB.108388633,108,-1404
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-22,New Loan Allocation, ,SLB.108444927,-135,1755
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-23,Loan Return Allocation, ,SLB.108444927,135,-1755
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-23,New Loan Allocation, ,SLB.108498845,-67,871
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-24,Loan Return Allocation, ,SLB.108498845,67,-871
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-24,New Loan Allocation, ,SLB.108544653,-175,2275
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-25,Loan Return Allocation, ,SLB.108544653,175,-2275
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-25,New Loan Allocation, ,SLB.108605431,-128,1408
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-28,Loan Return Allocation, ,SLB.108605431,128,-1408
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-28,New Loan Allocation, ,SLB.108649445,-67,804
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-29,Loan Return Allocation, ,SLB.108649445,67,-804
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-29,New Loan Allocation, ,SLB.108710543,-100,1300
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-30,Loan Return Allocation, ,SLB.108710543,100,-1300
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-30,New Loan Allocation, ,SLB.108764599,-278,3336
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-31,Loan Return Allocation, ,SLB.108764599,278,-3336
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-07-31,New Loan Allocation, ,SLB.108819351,-274,3288
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-01,Loan Return Allocation, ,SLB.108819351,274,-3288
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-01,New Loan Allocation, ,SLB.108866294,-292,3212
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-04,Loan Return Allocation, ,SLB.108866294,292,-3212
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-04,New Loan Allocation, ,SLB.108928871,-288,3168
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-05,Loan Return Allocation, ,SLB.108928871,288,-3168
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-05,New Loan Allocation, ,SLB.108984865,-300,3300
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-06,Loan Return Allocation, ,SLB.108984865,300,-3300
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-06,New Loan Allocation, ,SLB.109037504,-300,3300
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-07,Loan Return Allocation, ,SLB.109037504,300,-3300
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-07,New Loan Allocation, ,SLB.109083504,-300,3600
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-08,Loan Return Allocation, ,SLB.109083504,300,-3600
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-08,New Loan Allocation, ,SLB.109146122,-300,3600
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-11,Loan Return Allocation, ,SLB.109146122,300,-3600
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-11,New Loan Allocation, ,SLB.109202287,-82,1066
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-12,Loan Return Allocation, ,SLB.109202287,82,-1066
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-13,New Loan Allocation, ,SLB.109312867,-171,2394
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-14,Loan Return Allocation, ,SLB.109312867,171,-2394
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-14,New Loan Allocation, ,SLB.109366482,-192,2688
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-15,Loan Return Allocation, ,SLB.109366482,192,-2688
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-15,New Loan Allocation, ,SLB.109421289,-169,2197
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-18,Loan Return Allocation, ,SLB.109421289,169,-2197
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-18,New Loan Allocation, ,SLB.109476894,-188,2444
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-19,Loan Return Allocation, ,SLB.109476894,188,-2444
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-19,New Loan Allocation, ,SLB.109534355,-107,1391
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-20,Loan Return Allocation, ,SLB.109534355,107,-1391
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-20,New Loan Allocation, ,SLB.109589486,-182,2366
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-21,Loan Return Allocation, ,SLB.109589486,182,-2366
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-21,New Loan Allocation, ,SLB.109643618,-180,2160
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-22,Loan Return Allocation, ,SLB.109643618,180,-2160
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-22,New Loan Allocation, ,SLB.109694935,-197,2364
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-25,Loan Return Allocation, ,SLB.109694935,197,-2364
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-25,New Loan Allocation, ,SLB.109748922,-178,2492
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-26,Loan Return Allocation, ,SLB.109748922,178,-2492
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-26,New Loan Allocation, ,SLB.109802780,-148,2072
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-27,Loan Return Allocation, ,SLB.109802780,148,-2072
+Stock Yield Enhancement Program Securities Lent Activity,Data,Stocks,USD,TSLL,2025-08-27,New Loan Allocation, ,SLB.109858863,-134,1876
+Stock Yield Enhancement Program Securities Lent Activity,Data,Total,,,,,,,,1876
+Stock Yield Enhancement Program Securities Lent Activity,Data,Total in CAD,,,,,,,,2601.2378
+Stock Yield Enhancement Program Securities Lent Activity,Notes,"Fully paid securities lent under Interactive Brokers Canada Inc. fully paid lending program are not eligible for Canadian Investor Protection Fund (CIPF) coverage. Fully paid securities not lent under Interactive Brokers Canada Inc.'s fully paid lending program and held at Interactive Brokers Canada Inc. as at the date of insolvency of Interactive Brokers Canada Inc., are eligible for CIPF coverage."
+Stock Yield Enhancement Program Securities Lent Interest Details,Header,Currency,Value Date,Symbol,Start Date,Quantity,Collateral Amount,Market-based Rate (%),Interest Rate on Customer Collateral (%),Interest Paid to Customer,Code
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-10,TSLL,2025-06-10,-121,1452,2.25,1.13,0.05,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-11,TSLL,2025-06-11,-173,2422,2,1,0.07,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-12,TSLL,2025-06-12,-200,2800,2.04,1.02,0.08,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-13,TSLL,2025-06-13,-173,2249,1.92,0.96,0.06,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-14,TSLL,2025-06-13,-173,2249,1.92,0.96,0.06,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-15,TSLL,2025-06-13,-173,2249,1.92,0.96,0.06,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-16,TSLL,2025-06-16,-139,1807,1.78,0.89,0.05,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-17,TSLL,2025-06-17,-195,2730,1.78,0.89,0.07,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-18,TSLL,2025-06-18,-200,2600,1.83,0.92,0.07,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-19,TSLL,2025-06-19,-192,2496,1.83,0.92,0.07,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-20,TSLL,2025-06-20,-200,2600,1.83,0.92,0.07,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-21,TSLL,2025-06-20,-200,2600,1.83,0.92,0.07,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-22,TSLL,2025-06-20,-200,2600,1.83,0.92,0.07,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-23,TSLL,2025-06-23,-198,2574,1.89,0.95,0.07,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-24,TSLL,2025-06-24,-78,1170,1.91,0.96,0.03,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-25,TSLL,2025-06-25,-190,2660,2.25,1.13,0.09,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-26,TSLL,2025-06-26,-141,1833,2.47,1.24,0.07,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-27,TSLL,2025-06-27,-199,2587,2.47,1.24,0.09,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-28,TSLL,2025-06-27,-199,2587,2.47,1.24,0.09,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-29,TSLL,2025-06-27,-199,2587,2.47,1.24,0.09,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-06-30,TSLL,2025-06-30,-197,2561,2.56,1.28,0.09,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-01,TSLL,2025-07-01,-172,2236,2.77,1.39,0.09,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-07,TSLL,2025-07-07,-49,588,2.36,1.18,0.02,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-08,TSLL,2025-07-08,-60,660,2.44,1.22,0.02,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-09,TSLL,2025-07-09,-96,1056,2.11,1.06,0.03,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-10,TSLL,2025-07-10,-132,1452,1.99,1,0.04,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-11,TSLL,2025-07-11,-123,1476,1.98,0.99,0.04,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-12,TSLL,2025-07-11,-123,1476,1.98,0.99,0.04,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-13,TSLL,2025-07-11,-123,1476,1.98,0.99,0.04,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-14,TSLL,2025-07-14,-168,2016,1.64,0.82,0.05,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-15,TSLL,2025-07-15,-165,1980,1.62,0.81,0.05,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-16,TSLL,2025-07-16,-153,1836,1.6,0.8,0.04,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-17,TSLL,2025-07-17,-117,1521,1.61,0.81,0.04,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-18,TSLL,2025-07-18,-181,2172,1.59,0.8,0.05,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-19,TSLL,2025-07-18,-181,2172,1.59,0.8,0.05,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-20,TSLL,2025-07-18,-181,2172,1.59,0.8,0.05,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-21,TSLL,2025-07-21,-108,1404,1.6,0.8,0.03,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-22,TSLL,2025-07-22,-135,1755,1.7,0.85,0.04,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-23,TSLL,2025-07-23,-67,871,1.64,0.82,0.02,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-24,TSLL,2025-07-24,-175,2275,1.52,0.76,0.05,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-25,TSLL,2025-07-25,-128,1408,1.63,0.82,0.03,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-26,TSLL,2025-07-25,-128,1408,1.63,0.82,0.03,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-27,TSLL,2025-07-25,-128,1408,1.63,0.82,0.03,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-28,TSLL,2025-07-28,-67,804,1.45,0.73,0.02,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-29,TSLL,2025-07-29,-100,1300,1.11,0.56,0.02,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-30,TSLL,2025-07-30,-278,3336,1.23,0.62,0.06,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-07-31,TSLL,2025-07-31,-274,3288,1.22,0.61,0.06,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-08-01,TSLL,2025-08-01,-292,3212,1.16,0.58,0.05,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-08-02,TSLL,2025-08-01,-292,3212,1.16,0.58,0.05,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-08-03,TSLL,2025-08-01,-292,3212,1.16,0.58,0.05,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-08-04,TSLL,2025-08-04,-288,3168,1.17,0.59,0.05,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-08-05,TSLL,2025-08-05,-300,3300,1.17,0.59,0.06,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-08-06,TSLL,2025-08-06,-300,3300,1.17,0.59,0.06,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-08-07,TSLL,2025-08-07,-300,3600,1.2,0.6,0.06,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-08-08,TSLL,2025-08-08,-300,3600,2.02,1.01,0.1,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-08-09,TSLL,2025-08-08,-300,3600,2.02,1.01,0.1,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-08-10,TSLL,2025-08-08,-300,3600,2.02,1.01,0.1,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-08-11,TSLL,2025-08-11,-82,1066,1.95,0.98,0.03,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-08-13,TSLL,2025-08-13,-171,2394,2.59,1.3,0.09,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-08-14,TSLL,2025-08-14,-192,2688,2.55,1.28,0.1,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-08-15,TSLL,2025-08-15,-169,2197,2.63,1.32,0.08,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-08-16,TSLL,2025-08-15,-169,2197,2.63,1.32,0.08,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,USD,2025-08-17,TSLL,2025-08-15,-169,2197,2.63,1.32,0.08,Po
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,Total,,,,,,,,3.65,
+Stock Yield Enhancement Program Securities Lent Interest Details,Data,Total in CAD,,,,,,,,5.012832,
+Financial Instrument Information,Header,Asset Category,Symbol,Description,Conid,Security ID,Underlying,Listing Exch,Multiplier,Type,Code
+Financial Instrument Information,Data,Stocks,TSLL,DIREXION DAILY TSLA BULL 2X,578561429,US25460G2865,TSLL,NASDAQ,1,ETF,
+Financial Instrument Information,Header,Asset Category,Symbol,Description,Conid,Underlying,Listing Exch,Multiplier,Expiry,Delivery Month,Type,Strike,Code
+Financial Instrument Information,Data,Equity and Index Options,NVDL  250718P00040000,NVDL 18JUL25 40 P,784748004,NVDL,CBOE,100,2025-07-18,2025-07,P,40,
+Financial Instrument Information,Data,Equity and Index Options,NVDL  250829P00073000,NVDL 29AUG25 73 P,798394438,NVDL,CBOE,100,2025-08-29,2025-08,P,73,
+Financial Instrument Information,Data,Equity and Index Options,PTIR  250815P00018000,PTIR 15AUG25 18 P,792773948,PTIR,CBOE,100,2025-08-15,2025-08,P,18,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250425P00007500,TSLL 25APR25 7.5 P,766633605,TSLL,CBOE,100,2025-04-25,2025-04,P,7.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250502C00011000,TSLL 02MAY25 11 C,768322924,TSLL,CBOE,100,2025-05-02,2025-05,C,11,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250516C00014500,TSLL 16MAY25 14.5 C,781741698,TSLL,CBOE,100,2025-05-16,2025-05,C,14.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250516C00016000,TSLL 16MAY25 16 C,770795765,TSLL,CBOE,100,2025-05-16,2025-05,C,16,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250523C00015500,TSLL 23MAY25 15.5 C,773478430,TSLL,CBOE,100,2025-05-23,2025-05,C,15.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250523P00013000,TSLL 23MAY25 13 P,773479714,TSLL,CBOE,100,2025-05-23,2025-05,P,13,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250530P00012500,TSLL 30MAY25 12.5 P,776158491,TSLL,CBOE,100,2025-05-30,2025-05,P,12.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250530P00014500,TSLL 30MAY25 14.5 P,776447040,TSLL,CBOE,100,2025-05-30,2025-05,P,14.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250606C00019500,TSLL 06JUN25 19.5 C,785529354,TSLL,CBOE,100,2025-06-06,2025-06,C,19.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250606P00012500,TSLL 06JUN25 12.5 P,779982788,TSLL,CBOE,100,2025-06-06,2025-06,P,12.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250613C00013500,TSLL 13JUN25 13.5 C,781413251,TSLL,CBOE,100,2025-06-13,2025-06,C,13.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250613P00010000,TSLL 13JUN25 10 P,781413800,TSLL,CBOE,100,2025-06-13,2025-06,P,10,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250613P00011500,TSLL 13JUN25 11.5 P,781413828,TSLL,CBOE,100,2025-06-13,2025-06,P,11.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250613P00013000,TSLL 13JUN25 13 P,781414028,TSLL,CBOE,100,2025-06-13,2025-06,P,13,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250620C00015000,TSLL 20JUN25 15 C,785530429,TSLL,CBOE,100,2025-06-20,2025-06,C,15,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250620P00011000,TSLL 20JUN25 11 P,785531512,TSLL,CBOE,100,2025-06-20,2025-06,P,11,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250627C00016000,TSLL 27JUN25 16 C,783059145,TSLL,CBOE,100,2025-06-27,2025-06,C,16,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250627C00016500,TSLL 27JUN25 16.5 C,793192383,TSLL,CBOE,100,2025-06-27,2025-06,C,16.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250627P00010000,TSLL 27JUN25 10 P,782710783,TSLL,CBOE,100,2025-06-27,2025-06,P,10,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250703C00015000,TSLL 03JUL25 15 C,786837331,TSLL,CBOE,100,2025-07-03,2025-07,C,15,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250703P00009000,TSLL 03JUL25 9 P,787061216,TSLL,CBOE,100,2025-07-03,2025-07,P,9,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250703P00010000,TSLL 03JUL25 10 P,786838016,TSLL,CBOE,100,2025-07-03,2025-07,P,10,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250703P00010500,TSLL 03JUL25 10.5 P,786837952,TSLL,CBOE,100,2025-07-03,2025-07,P,10.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250711P00008500,TSLL 11JUL25 8.5 P,793830798,TSLL,CBOE,100,2025-07-11,2025-07,P,8.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250711P00009000,TSLL 11JUL25 9 P,788501445,TSLL,CBOE,100,2025-07-11,2025-07,P,9,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250718P00008500,TSLL 18JUL25 8.5 P,793832059,TSLL,CBOE,100,2025-07-18,2025-07,P,8.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250718P00009500,TSLL 18JUL25 9.5 P,793832102,TSLL,CBOE,100,2025-07-18,2025-07,P,9.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250725C00015000,TSLL 25JUL25 15 C,789640400,TSLL,CBOE,100,2025-07-25,2025-07,C,15,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250725C00015500,TSLL 25JUL25 15.5 C,789640374,TSLL,CBOE,100,2025-07-25,2025-07,C,15.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250725P00008500,TSLL 25JUL25 8.5 P,797609250,TSLL,CBOE,100,2025-07-25,2025-07,P,8.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250725P00009000,TSLL 25JUL25 9 P,789641402,TSLL,CBOE,100,2025-07-25,2025-07,P,9,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250801C00014000,TSLL 01AUG25 14 C,791222061,TSLL,CBOE,100,2025-08-01,2025-08,C,14,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250808C00012000,TSLL 08AUG25 12 C,795091223,TSLL,CBOE,100,2025-08-08,2025-08,C,12,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250808P00010000,TSLL 08AUG25 10 P,795091289,TSLL,CBOE,100,2025-08-08,2025-08,P,10,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250808P00010500,TSLL 08AUG25 10.5 P,795091286,TSLL,CBOE,100,2025-08-08,2025-08,P,10.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250815C00013500,TSLL 15AUG25 13.5 C,800900158,TSLL,CBOE,100,2025-08-15,2025-08,C,13.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250815C00014000,TSLL 15AUG25 14 C,792883726,TSLL,CBOE,100,2025-08-15,2025-08,C,14,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250815P00010500,TSLL 15AUG25 10.5 P,800900361,TSLL,CBOE,100,2025-08-15,2025-08,P,10.5,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250822C00014000,TSLL 22AUG25 14 C,796906879,TSLL,CBOE,100,2025-08-22,2025-08,C,14,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250822P00011000,TSLL 22AUG25 11 P,796907748,TSLL,CBOE,100,2025-08-22,2025-08,P,11,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250829C00014000,TSLL 29AUG25 14 C,798420580,TSLL,CBOE,100,2025-08-29,2025-08,C,14,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250829P00012000,TSLL 29AUG25 12 P,798421589,TSLL,CBOE,100,2025-08-29,2025-08,P,12,
+Financial Instrument Information,Data,Equity and Index Options,TSLL  250905C00015500,TSLL 05SEP25 15.5 C,801943029,TSLL,CBOE,100,2025-09-05,2025-09,C,15.5,
+Codes,Header,Code,Meaning,Code (Cont.),Meaning (Cont.)
+Codes,Data,A,Assignment
+Codes,Data,ADR,ADR Fee Accrual
+Codes,Data,AEx,Automatic exercise for dividend-related recommendation.
+Codes,Data,AFx,AutoFX conversion resulting from trading
+Codes,Data,Adj,Adjustment
+Codes,Data,Al,Allocation
+Codes,Data,Aw,Away Trade
+Codes,Data,B,Automatic Buy-in
+Codes,Data,Bo,Direct Borrow
+Codes,Data,C,Closing Trade
+Codes,Data,CD,Cash Delivery
+Codes,Data,CP,Complex Position
+Codes,Data,Ca,Cancelled
+Codes,Data,Co,Corrected Trade
+Codes,Data,Cx,Part or all of this transaction was a Crossing executed as dual agent by IB for two IB customers
+Codes,Data,DT,Discounted Trade
+Codes,Data,De,Delivery or Conversion Action
+Codes,Data,ETF,ETF Creation/Redemption
+Codes,Data,Ep,Resulted from an Expired Position
+Codes,Data,Ex,Exercise
+Codes,Data,FP,The fractional portion of this trade was executed against IB or an affiliate.
+Codes,Data,FPA,The fractional portion of this trade was executed against IB or an affiliate. IB acted as agent for the whole share portion of this trade.
+Codes,Data,G,Trade in Guaranteed Account Segment
+Codes,Data,GEA,Exercise or Assignment resulting from offsetting positions
+Codes,Data,HC,Highest Cost tax basis election
+Codes,Data,HFI,Investment Transferred to Hedge Fund
+Codes,Data,HFR,Redemption from Hedge Fund
+Codes,Data,I,Internal Transfer
+Codes,Data,IA,The transaction was executed against IB or an affiliate
+Codes,Data,IM,A portion of the order was executed against IB or an affiliate; IB acted as agent on a portion.
+Codes,Data,INV,Investment Transfer from Investor
+Codes,Data,IPO,This transaction was executed as part of an IPO in which IB was a member of the selling group and is classified as a Principal trade.
+Codes,Data,L,Ordered by IB (Margin Violation)
+Codes,Data,LD,Adjusted by Loss Disallowed from Wash Sale
+Codes,Data,LF,Liquidation of fractional position by IB
+Codes,Data,LI,"Last In, First Out (LIFO) tax basis election"
+Codes,Data,LT,Long Term P/L
+Codes,Data,Lo,Direct Loan
+Codes,Data,M,Entered manually by IB
+Codes,Data,MEx,Manual exercise for dividend-related recommendation.
+Codes,Data,ML,Maximize Losses tax basis election
+Codes,Data,MLG,Maximize Long Term Gain tax basis election
+Codes,Data,MLL,Maximize Long Term Loss tax basis election
+Codes,Data,MSG,Maximize Short Term Gain tax basis election
+Codes,Data,MSL,Maximize Short Term Loss tax basis election
+Codes,Data,O,Opening Trade
+Codes,Data,Off,Yes and No contracts offset to $1.00 cash settlement
+Codes,Data,P,Partial Execution
+Codes,Data,PE,Perpetual Investment
+Codes,Data,PI,Price Improvement
+Codes,Data,PTA,Post Trade Allocation
+Codes,Data,Po,Interest or Dividend Accrual Posting
+Codes,Data,Pr,Part or all of this transaction was executed by the Exchange as a Crossing by IB against an IB affiliate and is therefore classified as a Principal and not an agency trade
+Codes,Data,R,Dividend Reinvestment
+Codes,Data,RED,Redemption to Investor
+Codes,Data,RI,Recurring Investment
+Codes,Data,RP,"IB acted as agent for the fractional share portion of this trade, which was executed by an IB affiliate as riskless principal."
+Codes,Data,RPA,IB acted as agent for both the fractional share portion and the whole share portion of this trade; the fractional share portion was executed by an IB Affiliate as riskless principal.
+Codes,Data,Rb,Rebill
+Codes,Data,Re,Interest or Dividend Accrual Reversal
+Codes,Data,Ri,Reimbursement
+Codes,Data,S0,Contract settled to zero value
+Codes,Data,S1,Contract settled to $1.00
+Codes,Data,SF,Trade is subject to IBKR Lite Surcharge Fee if volume of such trades exceeds 10% of the total monthly Lite trade volume
+Codes,Data,SI,This order was solicited by Interactive Brokers
+Codes,Data,SL,Specific Lot tax basis election
+Codes,Data,SO,This order was marked as solicited by your Introducing Broker
+Codes,Data,SS,Customer designated this trade for shortened settlement and so is subject to execution at prices above the prevailing market
+Codes,Data,ST,Short Term P/L
+Codes,Data,T,Transfer
+Codes,Data,Un,Unvested shares from stock grant
+Codes,Data,XCH,Mutual Fund Exchange Transaction
+Notes/Legal Notes,Header,Type,Note
+Notes/Legal Notes,Data,Notes,"Stock exchange transactions generally settle on the trade date plus one business day (T+1). Options, futures and US open-end mutual fund transactions also settle on trade date plus one business day. Some exchanges and other transaction types may have longer or shorter settlement periods. Ending settled cash reflects the cash that has actually settled."
+Notes/Legal Notes,Data,Notes,Initial and maintenance margin requirements are available within the Account Window of the Trader Workstation.
+Notes/Legal Notes,Data,Notes,"Quantities preceded by a ""-"" sign indicate sell transactions. Other transactions are purchases. "
+Notes/Legal Notes,Data,Notes,"IB acts as agent in executing the fractional share portion of your order. In certain circumstances, IB routes the fractional portion of your order to an affiliate, which may execute the fractional portion of the order as principal. In such circumstances, this is indicated by the codes associated with the trade. If an IB affiliate acts as principal in executing any fractional share portion of your order, the order will be executed at the price displayed for the opposite side of the NBBO from your order (the offer if you are buying and the bid if you are selling) at the time of execution. If an IB affiliate is acting as riskless principal in connection with filling the fractional share portion of your order, the affiliate will execute the fractional share portion of your order at the price it receives for the execution of the whole share."
+Notes/Legal Notes,Data,Notes,"In case of partial executions, commissions are charged on the total quantity executed on the original order. The commission is displayed on the first partial execution only."
+Notes/Legal Notes,Data,Notes,Trade execution times are displayed in Eastern Time.
+Notes/Legal Notes,Data,Notes,Applicable regulatory fees for your transactions are available on the IB website at www.interactivebrokers.com/en/accounts/fees/exchangeAndRegulatoryFees.php.
+Notes/Legal Notes,Data,Notes,"Borrow Fee Rate represents the cost to borrow stock expressed in percent per annum. It is applied to the collateral value on the stock borrow contract and is separate from any interest earned on credit cash balances. Similarly, Loan Fee Rate represents the benefit to lend stock. A positive rate indicates a cost to the borrower/benefit to the lender and a negative rate indicates a benefit to the borrower/cost to the lender. In general, the fee rates for hard-to-borrow stocks are higher than for normal availability stocks."
+Notes/Legal Notes,Data,Notes,Interest Rate on Customer Collateral represents the interest paid on the collateral posted to the customer's account and received from lending stock.  A positive rate indicates a benefit to the lender.
+Notes/Legal Notes,Data,Notes,"The closing prices on this Activity Statement are indicative and may come from third-party sources. Interactive Brokers does not warrant the accuracy of the prices provided by third-party sources. Due to time zone differences, certain non-US mutual funds may deliver closing prices after the Activity Statement has been produced and the closing prices for such funds will reflect the previous day's price."
+Notes/Legal Notes,Data,Notes,All Market Data and Research services are provided through Global Financial Information Services (GmbH).
+Notes/Legal Notes,Data,Notes,"Market data is provided by Global Financial Information Services (GmbH). Your local broker collects amounts owed for fees and tax for such data on behalf of Global Financial Information Services (GmbH). Note, you are responsible for any applicable taxes relating to the provision of these services."
+Notes/Legal Notes,Data,Notes,"Please note that the ""cost"" of a security position refers to its ""book cost"" which means, in the case of a long security position, the total amount paid for the security, including any transaction charges related to the purchase and in the case of a short security position, the total amount received for the security, net of any transaction charges related to the sale, adjusted for distributions (other than dividends for short security position), returns of capital and corporate actions. In the case of securities transferred in, ""cost"" may in some instances refer to the market value of the security position as at the date of transfer and in such cases, market value information will be used to estimate part or all of the book cost of the relevant security position unless IBC reasonably believes it cannot determine the book cost of such security position.  Accordingly, the stated cost may not be appropriate for account performance or tax reporting purposes."
+Notes/Legal Notes,Data,Notes,RUS denotes Ruble balances that have been restricted by Russian authorities.
+Notes/Legal Notes,Data,Fixed Income Notes,"Call features for bonds or preferred stocks may affect the yield. For zero coupon, compound interest and multiplier securities, there are no periodic payments and securities may be callable below maturity value without notice to holder unless registered. For asset-backed securities, the actual yield may vary depending on the speed at which the underlying note is pre-paid. For additional information regarding bond yield, please contact the IB Help Desk at: ibkr.com/help. If this debt security is unrated by a nationally recognized statistical rating organization, it may pose a high risk of default. You should consult an independent advisor to determine whether unrated bonds are appropriate for your portfolio in light of your goals and your financial circumstances. Fees charged by bond trading centers are included in the cost of bond transactions."
+Notes/Legal Notes,Data,Legal Notes,"THIS STATEMENT IS BEING ISSUED TO YOU BY INTERACTIVE BROKERS CANADA INC. WHO HAS AGREED TO ACT AS THE CUSTODIAN FOR THE ASSETS DISCLOSED ON THIS STATEMENT. THE ASSETS THAT MAY BE ELIGIBLE FOR THE CANADIAN INVESTOR PROTECTION FUND (CIPF) COVERAGE, WITHIN SPECIFIED LIMITS, ARE LIMITED TO THOSE DISCLOSED IN THIS ACCOUNT STATEMENT.Please promptly report any inaccuracy or discrepancy in this statement, or in your account. Contact the IB Customer Service Department in writing using the form available on the IB website. You may also contact IB by phone, but if you report an error by phone, you should re-confirm such oral communication in writing in order to protect your rights, including rights under the Canadian Investor Protection Fund (CIPF).Interactive Brokers Canada Inc., www.interactivebrokers.ca, 877-745-4222 (Can.)"
+Notes/Legal Notes,Data,Legal Notes,"Interactive Brokers Group, Inc. (IBKR-NASDAQ) is a related or connected issuer of Interactive Brokers Canada Inc."
+Notes/Legal Notes,Data,Legal Notes,"All Volume Weighted Average Price (VWAP) trades are effected pursuant to an average price formula based on a reference price provided by a third-party data provider. Additional information about reference prices are available upon request.  IB, as agent, effects VWAP transactions through a market making affiliate, which acts as principal in such transactions and may have a long or short position in the security and may have profited or lost in connection with the transaction."
+Notes/Legal Notes,Data,Legal Notes,"IB accepts liquidity rebates or other order flow payments from Alternative Trading Systems, market makers and exchanges for certain orders in stocks. IB receives payment for some option orders pursuant to exchange-mandated marketing fee programs or other arrangements. The source and nature of any compensation received by IB in connection with any transaction is available upon written request of the customer. For further information, check the IB website and the Order Routing and Payment for Order Flow Disclosure provided when you opened your account and annually or visit ibkr.com/help."
+Notes/Legal Notes,Data,Legal Notes,"For security futures trades, if not already indicated on this statement, information about the time of any transaction, the identity of the counterparty to the transaction, and whether IB is acting as agent or principal, as agent for the counterparty, as agent for both parties to the contract, or as principal, and if acting as principal, whether the transaction was a block transaction or an exchange for physicals transaction, will be available upon written request of the customer."
+Notes/Legal Notes,Data,Legal Notes,"Interactive Brokers Canada Inc. offers ""Order-Execution Only Accounts."" This is an order execution only account. In addition, Customer is requested to promptly advise IB Canada of any material change in Customer's investment objectives or financial situation."
+Notes/Legal Notes,Data,Legal Notes,"Any free credit balances represent funds payable on demand which, although properly recorded in our books, are not segregated and may be used in the conduct of our business."
+Notes/Legal Notes,Data,Legal Notes,The audited financial summary statements of Interactive Brokers Canada Inc. and a list of the Partners/Directors/Officers (PDOs) of Interactive Brokers Canada Inc. are available upon request.
+Notes/Legal Notes,Data,Legal Notes,We are required to disclose to the Canada Revenue Agency all transactions involving the disposition  of securities.  Therefore we recommend that you keep your statements for tax purposes.
+Notes/Legal Notes,Data,Legal Notes,"Customers' accounts at CIRO Dealer Members are protected by the CIPF's Investment Dealer Fund in accordance with its Coverage Policy. A brochure describing the scope and nature of coverage, as well as the limitations and exclusions of coverage, is available upon request or at www.cipf.ca"
+Notes/Legal Notes,Data,Legal Notes,"In accordance with CIRO Rule 3217, Interactive Brokers Canada Inc. is required to provide you with the following Leverage Risk Disclosure Statement:  Using borrowed money to finance the purchase of securities involves greater risk than using cash resources only.  If you borrow money to purchase securities, your responsibility to repay the loan and pay interest as required by its terms remains the same even if the value of the securities purchased declines."
+Notes/Legal Notes,Data,Legal Notes,"**If this portfolio statement differs from your records, please report the differences directly to our external auditors. If no differences are reported, they will assume this portfolio statement is correct.** Deloitte s.e.n.c.r.l., Assurance & Advisory Services, audit-IBC@deloitte.ca, Telephone: 514-390-1712, Fax: 514-390-4113"
+Notes/Legal Notes,Data,Legal Notes,"Interactive Brokers LLC provides execution, clearing and custody services to Interactive Brokers Canada Inc."
+Notes/Legal Notes,Data,Legal Notes,"Interactive Brokers Canada Inc. is a member of the Canadian Investment Regulatory Organization (CIRO) and Member - Canadian Investor Protection Fund. Trading of securities and derivatives may involve a high degree of risk and investors should be prepared for the risk of losing their entire investment and losing further amounts. Interactive Brokers Canada Inc. is an execution-only dealer and does not provide investment advice or recommendations regarding the purchase or sale of any securities or derivatives. Our registered office is located at 1800 McGill College Avenue, Suite 2106, Montreal, Quebec, H3A 3J6, Canada."

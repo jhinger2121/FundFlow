@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Close Trade{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <h2>Close Trade for {{ position.option.ticker }}</h2>
+
+  <form method="post" action="{% url 'close_position_trade' position.fund.broker_account.broker_name position.id %}" class="mt-4">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" class="btn btn-danger mt-3">Submit Closing Trade</button>
+  </form>
+</div>
+{% endblock %}

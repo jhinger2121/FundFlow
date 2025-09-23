@@ -1,0 +1,733 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load form_tags %}
+
+{% block title %}Submit Trade{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+  <h2 class="mb-4">Submit New Options Trade</h2>
+
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  <div class="row">
+    <!-- LEFT: Form -->
+    <div class="col-lg-6">
+
+        <form method="post" action="{% url 'submit_options_trade' %}" class="row g-3">
+            {% csrf_token %}
+
+            <!-- Broker Field -->
+            <div class="col-md-6">
+            <label for="id_broker" class="form-label">Broker</label>
+            {{ form.broker|add_class:"form-select" }}
+            </div>
+
+            <!-- Fund Field -->
+            <div class="col-md-6">
+            <label for="id_fund" class="form-label">Fund</label>
+            {{ form.fund|add_class:"form-select" }}
+            </div>
+
+            <!-- Symbol Field -->
+            <div class="col-md-6">
+            <label for="id_symbol" class="form-label">Symbol</label>
+            {{ form.symbol}}
+            <div class="form-text">Ticker of the underlying asset (e.g., TSLA, AAPL).</div>
+            </div>
+
+            <!-- Trade Date -->
+            <div class="col-md-6">
+            <label for="id_trade_date" class="form-label">Trade Date</label>
+            {{ form.trade_date|add_class:"form-control" }}
+            </div>
+
+            <!-- Expiry Date -->
+            <div class="col-md-6">
+            <label for="id_expiry_date" class="form-label">Expiry Date</label>
+            {{ form.expiry_date|add_class:"form-control" }}
+            </div>
+
+            <!-- Strike Price -->
+            <div class="col-md-6">
+            <label for="id_strike_price" class="form-label">Strike Price</label>
+            {{ form.strike_price|add_class:"form-control" }}
+            <div class="form-text">Enter the strike price for the option.</div>
+            </div>
+
+            <!-- Premium -->
+            <div class="col-md-6">
+            <label for="id_premium" class="form-label">Premium</label>
+            {{ form.premium|add_class:"form-control" }}
+            <div class="form-text">Price paid/received per option contract.</div>
+            </div>
+
+            <!-- Quantity -->
+            <div class="col-md-6">
+            <label for="id_quantity" class="form-label">Quantity</label>
+            {{ form.quantity|add_class:"form-control" }}
+            </div>
+
+            <!-- Option Type -->
+            <div class="col-md-6">
+            <label for="id_option_type" class="form-label">Option Type</label>
+            {{ form.option_type|add_class:"form-select" }}
+            </div>
+
+            <!-- Action -->
+            <div class="col-md-6">
+            <label for="id_action" class="form-label">Action</label>
+            {{ form.action|add_class:"form-select" }}
+            </div>
+
+            <!-- Commission -->
+            <div class="col-md-6">
+            <label for="id_commission" class="form-label">Commission</label>
+            {{ form.commission|add_class:"form-control" }}
+            <div class="form-text">Optional: Include any broker commission cost.</div>
+            </div>
+
+            <!-- Notes -->
+            <div class="col-12">
+            <label for="id_notes" class="form-label">Notes</label>
+            {{ form.notes|add_class:"form-control" }}
+            </div>
+
+            <div class="col-12 text-end">
+            <button type="submit" class="btn btn-primary">Submit Trade</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- RIGHT: Live Preview -->
+    <div class="col-lg-6">
+      <div class="card shadow-sm border-0 mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Trade Summary</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Live Price:</strong> <span id="live-price">—</span></li>
+            <li class="list-group-item"><strong>Breakeven:</strong> <span id="breakeven">—</span></li>
+            <li class="list-group-item"><strong>Moneyness:</strong> <span id="moneyness" class="fw-bold"></span></li>
+            <li class="list-group-item"><strong>Yield of Trade:</strong> <span id="trade-yield" class="fw-bold"></span></li>
+            <li class="list-group-item"><strong>Annualized Yield:</strong> <span id="annual-yield" class="fw-bold"></span></li>
+            <li class="list-group-item"><strong>Total Premium:</strong> <span id="total-premium">—</span></li>
+            <li class="list-group-item"><strong>Capital at Risk:</strong> <span id="capital-risk">—</span></li>
+            <li class="list-group-item"><strong>Day Held:</strong> <span id="days-held">—</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const symbolInput = document.getElementById('id_symbol');
+    const strikeInput = document.getElementById('id_strike_price');
+    const commissionInput = document.getElementById('id_commission');
+    const premiumInput = document.getElementById('id_premium');
+    const quantityInput = document.getElementById('id_quantity');
+    const optionTypeInput = document.getElementById('id_option_type');
+    const actionInput = document.getElementById('id_action');
+    const tradeDateInput = document.getElementById('id_trade_date');
+    const expiryDateInput = document.getElementById('id_expiry_date');
+    const capitalRisk = document.getElementById('capital-risk');
+    const daysHeld = document.getElementById('days-held');
+
+    const livePriceEl = document.getElementById('live-price');
+    const breakevenEl = document.getElementById('breakeven');
+    const moneynessEl = document.getElementById('moneyness');
+    const totalPremiumEl = document.getElementById('total-premium');
+    const tradeYieldEl = document.getElementById('trade-yield');
+    const annualYieldEl = document.getElementById('annual-yield');
+
+    let cachedLivePrice = null;
+    let lastSymbol = '';
+
+    async function fetchLivePrice(symbol) {
+      try {
+        const response = await fetch(`/api/live-price/${symbol}/`);
+        if (!response.ok) throw new Error("Fetch failed");
+        const data = await response.json();
+        console.log("requeted for live price or closed price", data)
+        return data.price;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    async function handleSymbolChange() {
+      const symbol = symbolInput.value.trim().toUpperCase();
+      if (!symbol || symbol === lastSymbol) return;
+
+      lastSymbol = symbol;
+      cachedLivePrice = await fetchLivePrice(symbol);
+      updatePreview(); // trigger full update after fetching
+    }
+
+    function calculateDaysHeld() {
+      if (!tradeDateInput.value || !expiryDateInput.value) return null;
+      const tradeDate = new Date(tradeDateInput.value);
+      const expiryDate = new Date(expiryDateInput.value);
+      const diffMs = expiryDate - tradeDate;
+      return diffMs > 0 ? diffMs / (1000 * 60 * 60 * 24) : null;
+    }
+
+    function updatePreview() {
+      
+      const strike = parseFloat(strikeInput.value);
+      const commission = parseFloat(commissionInput.value);
+      const premium = parseFloat(premiumInput.value);
+      const quantity = parseInt(quantityInput.value);
+      const optionType = optionTypeInput.value;
+      const action = actionInput.value;
+
+      // Update live price
+      if (cachedLivePrice) {
+        livePriceEl.textContent = `$${cachedLivePrice.toFixed(2)}`;
+      } else {
+        livePriceEl.textContent = "—";
+        return;
+      }
+
+      // Breakeven calculation
+      if (!isNaN(strike) && !isNaN(premium)) {
+        const breakeven = optionType === 'CALL'
+          ? strike + premium
+          : strike - premium;
+        breakevenEl.textContent = `$${breakeven.toFixed(2)}`;
+      } else {
+        breakevenEl.textContent = '—';
+      }
+
+        if (!isNaN(strike) && cachedLivePrice && optionType) {
+        const diff = cachedLivePrice - strike;
+        const pct = (diff / cachedLivePrice) * 100;
+
+        let moneynessText = '';
+        let colorClass = '';
+        let arrow = '➖';
+        console.log("live price", cachedLivePrice, pct)
+        if (optionType === 'CALL') {
+            if (cachedLivePrice > strike) {
+            moneynessText = `ITM (+${pct.toFixed(2)}%)`;
+            colorClass = 'text-success';
+            arrow = '↑';
+            } else if (cachedLivePrice < strike) {
+            moneynessText = `OTM (${pct.toFixed(2)}%)`;
+            colorClass = 'text-danger';
+            arrow = '↓';
+            } else {
+            moneynessText = 'ATM (0%)';
+            colorClass = 'text-secondary';
+            arrow = '➖';
+            }
+        } else if (optionType === 'PUT') {
+            if (cachedLivePrice < strike) {
+            moneynessText = `ITM (+${Math.abs(pct).toFixed(2)}%)`;
+            colorClass = 'text-success';
+            arrow = '↑';
+            } else if (cachedLivePrice > strike) {
+            moneynessText = `OTM (-${Math.abs(pct).toFixed(2)}%)`;
+            colorClass = 'text-danger';
+            arrow = '↓';
+            } else {
+            moneynessText = 'ATM (0%)';
+            colorClass = 'text-secondary';
+            arrow = '➖';
+            }
+        }
+
+        moneynessEl.innerHTML = `${arrow} <strong>${moneynessText}</strong>`;
+        moneynessEl.className = `fw-bold ${colorClass}`;
+        } else {
+        moneynessEl.textContent = '—';
+        moneynessEl.className = 'fw-bold text-muted';
+        }
+
+      // Total Premium
+      if (!isNaN(premium) && !isNaN(quantity)) {
+        totalPremiumEl.textContent = `$${((premium * quantity * 100) - commission).toFixed(2)}`;
+      } else {
+        totalPremiumEl.textContent = '—';
+      }
+
+    // Trade Yield
+    let tradeYield = null;
+    if (action == "S" || action == "SS") {
+      if (!isNaN(premium) && !isNaN(quantity) && !isNaN(strike)) {
+        let totalPremium = (premium * quantity * 100) - commission;
+        let capital = strike * quantity * 100;
+        tradeYield = totalPremium / capital; // ratio
+        tradeYieldEl.textContent = `${(tradeYield * 100).toFixed(2)}%`;
+      } else {
+        tradeYieldEl.textContent = '—';
+      }
+    }
+
+    // Annual Yield
+    if (tradeYield !== null) {
+      const daysHeld = calculateDaysHeld();
+      if (daysHeld) {
+        const annualYield = (tradeYield / daysHeld) * 365;
+        annualYieldEl.textContent = `${(annualYield * 100).toFixed(2)}%`;
+      } else {
+        annualYieldEl.textContent = '—';
+      }
+    }
+
+    // Capital at Risk
+    if (action == "S" || action == "SS") {
+      if (!isNaN(quantity) && !isNaN(strike)) {
+        let capital = strike * quantity * 100;
+        capitalRisk.textContent = `${capital}`;
+      } else {
+        tradeYieldEl.textContent = '—';
+      }
+    }
+
+    // Days Helds
+    daysHeld.textContent = calculateDaysHeld()
+  }
+
+    // Listeners
+    symbolInput.addEventListener('blur', handleSymbolChange);
+    [strikeInput, premiumInput, quantityInput, optionTypeInput, commissionInput,
+    tradeDateInput, expiryDateInput].forEach(el =>
+      el.addEventListener('input', updatePreview)
+    );
+
+    const brokerSelect = document.getElementById("id_broker");
+    const fundSelect = document.getElementById("id_fund");
+
+    brokerSelect.addEventListener("change", function () {
+        const brokerId = this.value;
+        console.log('broker id', brokerId)
+        fundSelect.innerHTML = '<option value="">Loading...</option>';
+
+        if (brokerId) {
+            fetch(`/ajax/get-funds/?broker_id=${brokerId}`)
+                .then(response => response.json())
+                .then(data => {
+                    fundSelect.innerHTML = '<option value="">Select Fund</option>';
+                    data.forEach(item => {
+                        const option = document.createElement("option");
+                        option.value = item.id;
+                        option.textContent = item.name;
+                        fundSelect.appendChild(option);
+                    });
+                });
+        } else {
+            fundSelect.innerHTML = '<option value="">Select Fund</option>';
+        }
+    });
+  });
+</script>
+
+
+
+
+{% endblock content %}
+
+
+<div class="container">
+  <h2 class="mb-4">Submit Option Trade</h2>
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Submit Trade</button>
+    </form>
+
+    <hr>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <p class="data-label">Live Price: <span id="live-price" class="data-value">$--</span></p>
+            <p class="data-label">Out of the Money (OTM %): <span id="otm-percent" class="data-value">--%</span></p>
+            <p class="data-label">Annualized Return: <span id="annual-return" class="data-value">--%</span></p>
+            <p class="data-label">Break-even Price: <span id="break-even" class="data-value">--</span></p>
+        </div>
+    </div>
+
+    <hr>
+    <h4>Option Chain</h4>
+    <div class="row mb-3">
+        <div class="col">
+            <label>Expiry Dates</label>
+            <select id="expiry-select" class="form-select"></select>
+        </div>
+    </div>
+
+    <div id="option-chain-container" class="mt-3"></div>
+
+    <script>
+    async function fetchLivePrice(symbol) {
+        try {
+            const res = await fetch(`/api/live-price/${symbol}/`);
+            const data = await res.json();
+            return parseFloat(data.price);
+        } catch (error) {
+            console.error("Error fetching live price", error);
+            return null;
+        }
+    }
+
+    function calculateOTMPercent(strike, price, type) {
+        if (!strike || !price) return "--";
+        let otm = 0;
+        if (type === "CALL") {
+            otm = ((strike - price) / price) * 100;
+        } else {
+            otm = ((price - strike) / price) * 100;
+        }
+        return otm.toFixed(2);
+    }
+
+    function calculateAnnualizedReturn(premium, strike, expiry) {
+        if (!premium || !strike || !expiry) return "--";
+        const expiryDate = new Date(expiry);
+        const today = new Date();
+        const days = (expiryDate - today) / (1000 * 60 * 60 * 24);
+        if (days <= 0) return "--";
+        const annualized = (premium / (strike * 100)) / days * 365 * 100;
+        return annualized.toFixed(2);
+    }
+
+    function calculateBreakEven(strike, premium, type) {
+        if (!strike || !premium) return "--";
+        return type === "CALL"
+            ? (parseFloat(strike) + parseFloat(premium)).toFixed(2)
+            : (parseFloat(strike) - parseFloat(premium)).toFixed(2);
+    }
+
+    async function fetchExpiries(symbol) {
+        try {
+            const ticker = new window.yf.Ticker(symbol);
+            const info = await ticker.fetchInfo();
+            return info.options || [];
+        } catch (e) {
+            console.error("Expiries error:", e);
+            return [];
+        }
+    }
+
+    async function fetchOptionChain(symbol, expiry) {
+        const res = await fetch(`/api/option-chain/${symbol}/${expiry}/`);
+        const data = await res.json();
+        return data;
+    }
+
+    async function updateExpiries() {
+        const symbol = document.getElementById("id_symbol").value.trim().toUpperCase();
+        if (!symbol) return;
+
+        const res = await fetch(`https://query2.finance.yahoo.com/v7/finance/options/${symbol}`);
+        const json = await res.json();
+        const expiries = json.optionChain.result[0].expirationDates.map(ts => {
+            const d = new Date(ts * 1000);
+            return d.toISOString().slice(0, 10);
+        });
+
+        const expirySelect = document.getElementById("expiry-select");
+        expirySelect.innerHTML = "";
+        expiries.forEach(exp => {
+            const option = document.createElement("option");
+            option.value = exp;
+            option.textContent = exp;
+            expirySelect.appendChild(option);
+        });
+
+        if (expiries.length > 0) updateOptionChain();
+    }
+
+    async function updateOptionChain() {
+        const symbol = document.getElementById("id_symbol").value.trim().toUpperCase();
+        const expiry = document.getElementById("expiry-select").value;
+        if (!symbol || !expiry) return;
+
+        const data = await fetchOptionChain(symbol, expiry);
+        const container = document.getElementById("option-chain-container");
+
+        const buildTable = (options, type) => `
+        <h5>${type} Options</h5>
+        <table class="table table-sm table-bordered">
+            <thead>
+                <tr>
+                    <th>Strike</th>
+                    <th>Premium</th>
+                    <th>Delta</th>
+                    <th>IV</th>
+                    <th>Use</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${options.map(opt => `
+                    <tr>
+                        <td>${opt.strike.toFixed(2)}</td>
+                        <td>${opt.lastPrice.toFixed(2)}</td>
+                        <td>${(opt.delta ?? 0).toFixed(2)}</td>
+                        <td>${(opt.impliedVolatility * 100).toFixed(2)}%</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" onclick="autofillTrade(${opt.strike}, ${opt.lastPrice}, '${type}', '${expiry}')">Use</button>
+                        </td>
+                    </tr>
+                `).join('')}
+            </tbody>
+        </table>`;
+
+        const calls = data.calls || [];
+        const puts = data.puts || [];
+        container.innerHTML = buildTable(calls, "CALL") + buildTable(puts, "PUT");
+    }
+
+    function autofillTrade(strike, premium, type, expiry) {
+        document.getElementById("id_strike_price").value = strike;
+        document.getElementById("id_premium").value = premium;
+        document.getElementById("id_option_type").value = type;
+        document.getElementById("id_expiry_date").value = new Date(expiry + "T15:59").toISOString().slice(0, 16);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const symbolInput = document.getElementById("id_symbol");
+        const strikeInput = document.getElementById("id_strike_price");
+        const premiumInput = document.getElementById("id_premium");
+        const expiryInput = document.getElementById("id_expiry_date");
+        const typeInput = document.getElementById("id_option_type");
+
+        async function updateMetrics() {
+            const symbol = symbolInput.value.trim().toUpperCase();
+            const strike = parseFloat(strikeInput.value);
+            const premium = parseFloat(premiumInput.value);
+            const expiry = expiryInput.value;
+            const type = typeInput.value;
+
+            if (!symbol) return;
+
+            const livePrice = await fetchLivePrice(symbol);
+            if (!livePrice) return;
+
+            document.getElementById("live-price").innerText = `$${livePrice.toFixed(2)}`;
+            document.getElementById("otm-percent").innerText = calculateOTMPercent(strike, livePrice, type) + "%";
+            document.getElementById("annual-return").innerText = calculateAnnualizedReturn(premium, strike, expiry) + "%";
+            document.getElementById("break-even").innerText = calculateBreakEven(strike, premium, type);
+        }
+
+        [symbolInput, strikeInput, premiumInput, expiryInput, typeInput].forEach(el => {
+            el.addEventListener("input", updateMetrics);
+        });
+
+        symbolInput.addEventListener("blur", updateExpiries);
+        document.getElementById("expiry-select").addEventListener("change", updateOptionChain);
+
+        updateMetrics();
+    });
+    </script>
+</div>
+<div class="container mt-5">
+  <h2 class="mb-4">Submit New Options Trade</h2>
+
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  <form method="post" action="{% url 'submit_options_trade' %}" class="row g-3">
+    {% csrf_token %}
+
+    <!-- Fund Field -->
+    <div class="col-md-6">
+      <label for="id_fund" class="form-label">Fund</label>
+      {{ form.fund|add_class:"form-select" }}
+    </div>
+
+    <!-- Symbol Field -->
+    <div class="col-md-6">
+      <label for="id_symbol" class="form-label">Symbol</label>
+      {{ form.symbol}}
+      <div class="form-text">Ticker of the underlying asset (e.g., TSLA, AAPL).</div>
+    </div>
+
+    <!-- Trade Date -->
+    <div class="col-md-6">
+      <label for="id_trade_date" class="form-label">Trade Date</label>
+      {{ form.trade_date|add_class:"form-control" }}
+    </div>
+
+    <!-- Expiry Date -->
+    <div class="col-md-6">
+      <label for="id_expiry_date" class="form-label">Expiry Date</label>
+      {{ form.expiry_date|add_class:"form-control" }}
+    </div>
+
+    <!-- Strike Price -->
+    <div class="col-md-6">
+      <label for="id_strike_price" class="form-label">Strike Price</label>
+      {{ form.strike_price|add_class:"form-control" }}
+      <div class="form-text">Enter the strike price for the option.</div>
+    </div>
+
+    <!-- Premium -->
+    <div class="col-md-6">
+      <label for="id_premium" class="form-label">Premium</label>
+      {{ form.premium|add_class:"form-control" }}
+      <div class="form-text">Price paid/received per option contract.</div>
+    </div>
+
+    <!-- Quantity -->
+    <div class="col-md-6">
+      <label for="id_quantity" class="form-label">Quantity</label>
+      {{ form.quantity|add_class:"form-control" }}
+    </div>
+
+    <!-- Option Type -->
+    <div class="col-md-6">
+      <label for="id_option_type" class="form-label">Option Type</label>
+      {{ form.option_type|add_class:"form-select" }}
+    </div>
+
+    <!-- Action -->
+    <div class="col-md-6">
+      <label for="id_action" class="form-label">Action</label>
+      {{ form.action|add_class:"form-select" }}
+    </div>
+
+    <!-- Commission -->
+    <div class="col-md-6">
+      <label for="id_commission" class="form-label">Commission</label>
+      {{ form.commission|add_class:"form-control" }}
+      <div class="form-text">Optional: Include any broker commission cost.</div>
+    </div>
+
+    <!-- Notes -->
+    <div class="col-12">
+      <label for="id_notes" class="form-label">Notes</label>
+      {{ form.notes|add_class:"form-control" }}
+    </div>
+
+    <div class="col-12 text-end">
+      <button type="submit" class="btn btn-primary">Submit Trade</button>
+    </div>
+  </form>
+</div>
+
+<hr>
+<div class="container my-5">
+<h4>Option Chain</h4>
+<div class="container row mb-3">
+    <div class="col">
+        <label>Expiry Dates</label>
+        <select id="expiry-select" class="form-select"></select>
+    </div>
+</div>
+</div>
+
+<div id="option-chain-container" class="mt-3"></div>
+<script>
+async function fetchExpiries(symbol) {
+    try {
+        const ticker = new window.yf.Ticker(symbol);
+        const info = await ticker.fetchInfo();
+        return info.options || [];
+    } catch (e) {
+        console.error("Expiries error:", e);
+        return [];
+    }
+}
+
+async function fetchOptionChain(symbol, expiry) {
+    const res = await fetch(`/api/option-chain/${symbol}/${expiry}/`);
+    const data = await res.json();
+    return data;
+}
+
+async function updateExpiries() {
+    const symbol = document.getElementById("id_symbol").value.trim().toUpperCase();
+    if (!symbol) return;
+
+    const ticker = new window.yf.Ticker(symbol);
+    const expiries = await ticker.fetchOptions();
+
+    const expirySelect = document.getElementById("expiry-select");
+    expirySelect.innerHTML = "";
+    expiries.forEach(exp => {
+        const option = document.createElement("option");
+        option.value = exp;
+        option.textContent = exp;
+        expirySelect.appendChild(option);
+    });
+
+    if (expiries.length > 0) {
+        updateOptionChain();  // trigger first fetch
+    }
+}
+
+async function updateOptionChain() {
+    const symbol = document.getElementById("id_symbol").value.trim().toUpperCase();
+    const expiry = document.getElementById("expiry-select").value;
+    if (!symbol || !expiry) return;
+
+    const data = await fetchOptionChain(symbol, expiry);
+    const container = document.getElementById("option-chain-container");
+
+    const buildTable = (options, type) => {
+        return `
+        <h5>${type} Options</h5>
+        <table class="table table-sm table-bordered">
+            <thead>
+                <tr>
+                    <th>Strike</th>
+                    <th>Premium</th>
+                    <th>Delta</th>
+                    <th>IV</th>
+                    <th>Use</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${options.map(opt => `
+                    <tr>
+                        <td>${opt.strike.toFixed(2)}</td>
+                        <td>${opt.lastPrice.toFixed(2)}</td>
+                        <td>${(opt.delta ?? 0).toFixed(2)}</td>
+                        <td>${(opt.impliedVolatility * 100).toFixed(2)}%</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" onclick="autofillTrade(${opt.strike}, ${opt.lastPrice}, '${type}', '${expiry}')">
+                                Use
+                            </button>
+                        </td>
+                    </tr>
+                `).join('')}
+            </tbody>
+        </table>
+        `;
+    };
+
+    const calls = data.calls || [];
+    const puts = data.puts || [];
+
+    container.innerHTML = buildTable(calls, "CALL") + buildTable(puts, "PUT");
+}
+
+function autofillTrade(strike, premium, type, expiry) {
+    document.getElementById("id_strike_price").value = strike;
+    document.getElementById("id_premium").value = premium;
+    document.getElementById("id_option_type").value = type;
+    document.getElementById("id_expiry_date").value = new Date(expiry + "T15:59").toISOString().slice(0, 16);  // Set expiry near market close
+}
+
+// Trigger expiry fetch when symbol changes
+document.getElementById("id_symbol").addEventListener("blur", updateExpiries);
+document.getElementById("expiry-select").addEventListener("change", updateOptionChain);
+</script>
+
+

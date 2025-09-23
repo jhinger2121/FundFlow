@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}Add Broker{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow rounded-4">
+        <div class="card-header bg-primary text-white rounded-top-4">
+          <h4 class="mb-0">Add Broker Account</h4>
+        </div>
+        <div class="card-body">
+          <form method="post" novalidate>
+            {% csrf_token %}
+
+            <!-- Broker Name -->
+            <div class="mb-3">
+              <label for="id_broker_name" class="form-label">Broker</label>
+              {{ form.broker_name }}
+              {% if form.broker_name.errors %}
+                <div class="invalid-feedback d-block">
+                  {{ form.broker_name.errors.0 }}
+                </div>
+              {% endif %}
+            </div>
+
+            <!-- Account Number -->
+            <div class="mb-3">
+              <label for="id_account_number" class="form-label">Account Number</label>
+              {{ form.account_number }}
+              <div class="form-text">Optional. Example: <strong>2128490</strong></div>
+              {% if form.account_number.errors %}
+                <div class="invalid-feedback d-block">
+                  {{ form.account_number.errors.0 }}
+                </div>
+              {% endif %}
+            </div>
+
+            <!-- Submit -->
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-success btn-lg">Add Broker</button>
+              <!-- New Button: Go to Add Fund -->
+              <a href="{% url 'add_fund' %}" class="btn btn-outline-primary btn-lg">Add Fund</a>
+              <!-- New Button: Go to Add Trade -->
+              <a href="{% url 'submit_options_trade' %}" class="btn btn-outline-primary btn-lg">Add Trade</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

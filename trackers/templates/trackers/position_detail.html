@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Position: {{ position.option.ticker }}</h2>
+    <p><strong>Fund:</strong> {{ position.fund.name }}</p>
+    <p><strong>Type:</strong> {{ position.option.get_type_display }}</p>
+    <p><strong>Remaining Quantity:</strong> {{ position.remaining_quantity }}</p>
+    <p><strong>Average Price:</strong> {{ position.average_price }}</p>
+    <p><strong>Profit / Loss:</strong> {{ position.profit_loss }}</p>
+    <p><strong>Total Commission Paid:</strong> {{ position.commission }}</p>
+    <p><strong>Active:</strong> {{ position.active }}</p>
+
+    {% if position.active %}
+    <div class="my-4 d-flex gap-2 flex-wrap">
+        
+        {% if position.get_trade_type_display == "Sell" %}
+            <a href="{% url 'close_position_trade' position.fund.broker_account.broker_name position.id %}?type=BTC" class="btn btn-warning">🔐 Buy to Close (BTC)</a>
+        {% elif position.get_trade_type_display == "Buy" %}
+            <a href="{% url 'close_position_trade' position.fund.broker_account.broker_name position.id %}?type=STC" class="btn btn-warning">🔐 Sell to Close (STC)</a>
+        {% endif %}
+
+        <a href="{% url 'mark_position_expired' position.id %}" class="btn btn-outline-danger">
+            ❌ Expired Worthless
+        </a>
+
+        <div>
+            {% if position.option.type == "P" %}
+                {% if position.get_trade_type_display == "Sell" %}
+                    <a href="{% url 'holding_buy_from_put' position.fund.broker_account.broker_name position.id %}" class="btn btn-success">📦 Assigned? Buy Shares</a>
+                {% elif position.get_trade_type_display == "Buy" %}
+                    <a href="{% url 'holding_sell_from_call' position.fund.broker_account.broker_name position.id %}" class="btn btn-success">📦 Assigned? Sell Shares</a>
+                {% endif %}
+            {% elif position.option.type == "C" %}
+                {% if position.get_trade_type_display == "Sell" %}
+                    <a href="{% url 'holding_sell_from_call' position.fund.broker_account.broker_name position.id %}" class="btn btn-success">📦 Assigned? Sell Shares</a>
+                {% elif position.get_trade_type_display == "Buy" %}
+                    <a href="{% url 'holding_buy_from_put' position.fund.broker_account.broker_name position.id %}" class="btn btn-success">📦 Assigned? Buy Shares</a>
+                {% endif %}
+            {% endif %}
+        </div>
+        
+        <!-- <a href="#" class="btn btn-secondary">
+            ✏️ Edit Position
+        </a> -->
+       
+    </div>
+    {% else %}
+    <div class="alert alert-info">This position is closed.</div>
+    {% endif %}
+
+    <hr>
+
+    <h4 class="mt-4">Related Trades</h4>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total Price</th>
+                <th>Commission</th>
+                <th>Annual Yield</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for trade in trades %}
+            <tr>
+                <td>{{ trade.get_trade_type_display }}</td>
+                <td>{{ trade.quantity }}</td>
+                <td>{{ trade.price }}</td>
+                <td>{{ trade.total_price }}</td>
+                <td>{{ trade.commission }}</td>
+                <td>{{ trade.annual_yield|floatformat:2 }}</td>
+                <td>{{ trade.date }}</td>
+                <td>
+                    <a href="{% url 'edit_trade' trade.option.fund.broker_account.broker_name trade.id %}" class="btn btn-sm btn-outline-primary">✏️ Edit</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

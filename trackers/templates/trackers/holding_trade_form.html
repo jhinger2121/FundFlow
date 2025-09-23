@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+  <h2>{{ action }}</h2>
+
+  <!-- Show Position Details -->
+  <div class="mb-3 p-3 border rounded bg-light">
+    <h5>Position Details</h5>
+    <ul class="list-unstyled">
+      <li><strong>Asset:</strong> {{ position.option.underlying_asset }}</li>
+      <li><strong>Strike Price:</strong> {{ position.option.strike_price }}</li>
+      <li><strong>Contracts Remaining:</strong> {{ position.remaining_quantity }}</li>
+      <li><strong>Expiry:</strong> {{ position.option.expiration_date }}</li>
+      <li><strong>Type/Action:</strong> {{ position.option.get_type_display }}/{{ position.get_trade_type_display }}</li>
+      <li>
+        <strong>Live Price:</strong>
+          <p class="mb-0">
+            <span class="fw-bold text-success">${{ holding.asset.live_price }}</span>
+            <small class="text-muted">({{ holding.asset.live_price_updated_at|timesince }} ago)</small>
+          </p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Show Form with Errors -->
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {% for field in form %}
+      <div class="mb-3">
+        {{ field.label_tag }}
+        {{ field }}
+        {% if field.errors %}
+          <div class="text-danger small">{{ field.errors|striptags }}</div>
+        {% endif %}
+      </div>
+    {% endfor %}
+
+    <button type="submit" class="btn btn-primary">{{ action }}</button>
+  </form>
+
+  <a href="{% url 'user_fund_detail' position.fund.broker_account.broker_name position.fund.id position.fund.slug %}" class="btn btn-secondary mt-2">Cancel</a>
+</div>
+{% endblock %}

@@ -1,0 +1,357 @@
+{% extends 'base.html' %}
+{% block title %}Fund Detail - {{ fund.name }}{% endblock title %}
+{% block content %}
+
+<div class="container-fluid mt-5">
+    
+
+    <div class="container py-4">
+        <!-- Fund Overview Card -->
+        <div class="bg-white p-4 rounded shadow-sm mb-4 border">
+            
+            <!-- Fund Header -->
+            <div class="row">
+                <div class="col-12 text-center mb-3">
+                    <h1 class="display-5 fw-bold">{{ fund.name }}</h1>
+                    {% if fund.description %}
+                        <p class="text-muted mb-0">{{ fund.description }}</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Profit Summary Grid -->
+            <div class="row g-3 text-center">
+                 <!-- Total Profit -->
+                <div class="col-6 col-md-3">
+                    <div class="bg-light p-3 rounded h-100">
+                        <p class="text-muted small mb-1">Total Profit</p>
+                        <p class="fw-bold fs-5 mb-0 {% if fund.total_profit >= 0 %}text-success{% else %}text-danger{% endif %}">
+                            ${{ fund.total_profit }}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Weekly Profit -->
+                <div class="col-6 col-md-3">
+                    <div class="bg-light p-3 rounded h-100">
+                        <p class="text-muted small mb-1">Weekly Profit</p>
+                        <p class="fw-bold fs-5 mb-0 {% if fund.get_current_week_summary.weekly_profit >= 0 %}text-success{% else %}text-danger{% endif %}">
+                            ${{ fund.get_current_week_summary.weekly_profit }}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Monthly Profit -->
+                <div class="col-6 col-md-3">
+                    <div class="bg-light p-3 rounded h-100">
+                        <p class="text-muted small mb-1">Monthly Profit</p>
+                        <p class="fw-bold fs-5 mb-0 {% if fund.get_current_month_summary.monthly_profit >= 0 %}text-success{% else %}text-danger{% endif %}">
+                            ${{ fund.get_current_month_summary.monthly_profit }}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Annual Profit -->
+                <div class="col-6 col-md-3">
+                    <div class="bg-light p-3 rounded h-100">
+                        <p class="text-muted small mb-1">Annual Profit</p>
+                        <p class="fw-bold fs-5 mb-0 {% if fund.get_current_year_summary.annually_profit >= 0 %}text-success{% else %}text-danger{% endif %}">
+                            ${{ fund.get_current_year_summary.annually_profit }}
+                        </p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        <h2 class="mb-4 fw-semibold">📋 All Holdings</h2>
+
+        <div class="table-responsive shadow-sm rounded-3">
+            <table class="table table-bordered table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Fund</th>
+                        <th>Asset</th>
+                        <th>Quantity</th>
+                        <th>Avg. Price</th>
+                        <th>Total Cost</th>
+                        <th>Realized P/L</th>
+                        <th>Live Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for holding in holding %}
+                    <tr>
+                        <td class="fw-medium">{{ holding.fund.name }}</td>
+                        <td>{{ holding.asset.name }}</td>
+                        <td><strong>{{ holding.quantity }}</strong></td>
+                        <td>${{ holding.average_price }}</td>
+                        <td>${{ holding.total_cost }}</td>
+                        <td class="{% if holding.realized_profit >= 0 %}text-success{% else %}text-danger{% endif %}">
+                            <strong>${{ holding.realized_profit }}</strong>
+                        </td>
+                        <td>
+                            <span class="badge bg-success-subtle text-success fw-semibold">
+                                ${{ holding.asset.live_price }}
+                            </span>
+                            <small class="text-muted">({{ holding.asset.live_price_updated_at|timesince }} ago)</small>
+                        </td>
+                        <td>
+                            <a href="{% url 'holding_detail' holding.fund.broker_account.broker_name holding.id %}" class="btn btn-sm btn-outline-primary">
+                                View
+                            </a>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="9" class="text-center text-muted">No holdings found.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="mb-0">
+                {{ fund.name }} –
+                <span class="fw-light">{% if show_all %}All Positions{% else %}Active Positions{% endif %}</span>
+            </h2>
+            <a href="?{% if not show_all %}all=true{% endif %}" class="btn btn-outline-primary btn-sm">
+                {% if show_all %}Show Only Active{% else %}Show All Positions{% endif %}
+            </a>
+        </div>
+
+
+        <div class="table-responsive shadow-sm rounded-3">
+            <table class="table table-bordered table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>Dates<br><small class="text-muted">Trade → Expiry</small></th>
+                        <th>Ticker</th>
+                        <th>Contracts</th>
+                        <th>Strike / Entry</th>
+                        <th>At Trade<br><small class="text-muted">Option & %OTM</small></th>
+                        <th>Now<br><small class="text-muted">Live & %OTM</small></th>
+                        <th>Type</th>
+                        <th>Breakeven</th>
+                        <th>Annual Yield</th>
+                        <th>Total Return</th>
+                        <th>P/L</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for position in positions %}
+                    <tr>
+                        <!-- Dates -->
+                        <td>
+                            {{ position.date|date:"Y-m-d" }} → {{ position.option.expiration_date|date:"Y-m-d" }}
+                            <small class="text-muted d-block">
+                                {{ position.date|timesince }} ago
+                                {% if position.option.expiration_date >= today %}
+                                    • Exp in {{ position.option.expiration_date|timeuntil }}
+                                {% endif %}
+                            </small>
+                        </td>
+
+                        <!-- Ticker -->
+                        <td><a href="{% url 'position_detail' position.fund.broker_account.broker_name position.id %}" class="fw-medium">{{ position.option.ticker }}</a></td>
+
+                        <!-- Quantity -->
+                        <td class="text-center">{{ position.remaining_quantity }}</td>
+
+                        <!-- Strike / Entry -->
+                        <td>
+                            <strong>${{ position.option.strike_price|floatformat:2 }}</strong><br>
+                            <small class="text-muted">Paid: ${{ position.average_price|floatformat:2 }}</small>
+                        </td>
+
+                        <!-- At Trade -->
+                        <td>
+                            ${{ position.option.price|floatformat:2 }}<br>
+                            <small>{{ position.option.percent_out_of_money_at_snapshot|default:"–" }}% OTM</small>
+                        </td>
+
+                        <!-- Now -->
+                        <td>
+                            {% if position.option.underlying_asset.live_price %}
+                                <div class="fw-semibold text-success">
+                                    ${{ position.option.underlying_asset.live_price|floatformat:2 }}
+                                </div>
+
+                                {% with pct=position.option.percent_out_of_money_now %}
+                                    <small class="{% if pct > 0 %}text-success{% else %}text-danger fw-semibold{% endif %}">
+                                        {{ pct|floatformat:2 }}%
+                                        {% if pct > 0 %}
+                                            OTM
+                                        {% else %}
+                                            ITM
+                                        {% endif %}
+                                    </small><br>
+                                {% endwith %}
+
+                                <small class="text-muted">
+                                    Updated {{ position.option.underlying_asset.live_price_updated_at|timesince }} ago
+                                </small>
+                            {% else %}
+                                <span class="text-muted">–</span>
+                            {% endif %}
+                        </td>
+
+                        <!-- Type -->
+                        <td class="text-center">
+                            <span class="badge bg-light text-dark">{{ position.option.get_type_display }}</span><br>
+                            {% if position.get_trade_type_display == "Buy" %}
+                                <span class="badge bg-success">Buy</span>
+                            {% else %}
+                                <span class="badge bg-danger">Sell</span>
+                            {% endif %}
+                        </td>
+
+                        <td>${{ position.option.breakeven_price|floatformat:2 }}</td>
+                        <td>{{ position.annual_yield|default:"–" }}</td>
+
+                        <!-- Return -->
+                        <td>
+                            <strong>{{ position.total_return|floatformat:2 }}</strong>
+                        </td>
+
+                        <!-- P/L -->
+                        <td class="{% if position.profit_loss < 0 %}text-danger{% else %}text-success{% endif %} fw-semibold">
+                            ${{ position.profit_loss|floatformat:2 }}
+                        </td>
+
+                        <!-- Actions -->
+                        <td>
+                            {% if position.active %}
+                                {% if position.get_trade_type_display == "Sell" %}
+                                    <a href="{% url 'close_position_trade' position.fund.broker_account.broker_name position.id %}?type=BTC" class="btn btn-sm btn-outline-primary w-100 mb-1">Buy to Close</a>
+                                {% elif position.get_trade_type_display == "Buy" %}
+                                    <a href="{% url 'close_position_trade'  position.fund.broker_account.broker_name position.id %}?type=STC" class="btn btn-sm btn-outline-success w-100 mb-1">Sell to Close</a>
+                                {% endif %}
+
+                                <a href="{% url 'mark_position_expired' position.id %}" class="d-block text-muted small mb-2">Mark Expired</a>
+
+                                {% if position.option.type == "P" %}
+                                    {% if position.get_trade_type_display == "Sell" %}
+                                        <a href="{% url 'holding_buy_from_put' position.fund.broker_account.broker_name position.id %}" class="btn btn-sm btn-success w-100">Assigned? Buy Shares</a>
+                                    {% elif position.get_trade_type_display == "Buy" %}
+                                        <a href="{% url 'holding_sell_from_call'  position.fund.broker_account.broker_name position.id %}" class="btn btn-sm btn-success w-100">Assigned? Sell Shares</a>
+                                    {% endif %}
+                                {% elif position.option.type == "C" %}
+                                    {% if position.get_trade_type_display == "Sell" %}
+                                        <a href="{% url 'holding_sell_from_call'  position.fund.broker_account.broker_name position.id %}" class="btn btn-sm btn-success w-100">Assigned? Sell Shares</a>
+                                    {% elif position.get_trade_type_display == "Buy" %}
+                                        <a href="{% url 'holding_buy_from_put'  position.fund.broker_account.broker_name position.id %}" class="btn btn-sm btn-success w-100">Assigned? Buy Shares</a>
+                                    {% endif %}
+                                {% endif %}
+                            {% else %}
+                                <span class="text-muted small">Closed</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="12" class="text-center text-muted">No positions found.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+<div class="container my-5">
+    <h3 class="mt-4">Profit Summary</h3>
+    <select id="timeframe" class="form-select w-auto mb-3">
+    <option value="weekly">Weekly</option>
+    <option value="monthly">Monthly</option>
+    <option value="annually">Annually</option>
+    </select>
+
+    <canvas id="profitChart" height="100"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+    let chart;
+    const ctx = document.getElementById('profitChart').getContext('2d');
+
+    function renderChart(labels, data) {
+        const bgColors = data.map(p => p >= 0 ? '#4caf50' : '#f44336'); // Green/Red
+        const borderColors = data.map(p => p >= 0 ? '#388e3c' : '#d32f2f');
+
+        if (chart) chart.destroy();
+        chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+            label: 'Profit ($)',
+            data: data,
+            backgroundColor: bgColors,
+            borderColor: borderColors,
+            tension: 0.5,
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+            y: {
+                beginAtZero: true,
+                title: {
+                display: true,
+                text: 'Profit ($)'
+                }
+            },
+            x: {
+                title: {
+                display: true,
+                text: 'Period'
+                }
+            }
+            },
+            plugins: {
+            tooltip: {
+                callbacks: {
+                label: context => {
+                    const value = context.raw;
+                    return `${value >= 0 ? '+' : ''}$${value.toFixed(2)}`;
+                }
+                }
+            },
+            legend: {
+                display: false
+            }
+            }
+        }
+        });
+    }
+
+    function updateChart(type, data) {
+        const labels = data[type].map(item => item.label);
+        const profits = data[type].map(item => item.profit);
+        renderChart(labels, profits);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch("{% url 'fund_profit_summary_data' fund_id=fund.id %}")
+        .then(response => response.json())
+        .then(data => {
+            updateChart("weekly", data);
+            document.getElementById("timeframe").addEventListener("change", function () {
+            updateChart(this.value, data);
+            });
+        });
+    });
+    </script>
+
+</div>
+
+{% endblock %}
