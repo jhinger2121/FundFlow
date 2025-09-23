@@ -26,3 +26,6 @@ Thumbs.db
 *.xls
 *.xlsx
 *.cache
+
+media/
+.history/
